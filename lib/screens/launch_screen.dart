@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class LaunchScreen extends StatefulWidget {
   const LaunchScreen({Key? key}) : super(key: key);
 
@@ -7,17 +8,29 @@ class LaunchScreen extends StatefulWidget {
 }
 
 class _LaunchScreenState extends State<LaunchScreen> {
-@override
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, '/home_screen');
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.blue.shade700,
+              Colors.blue.shade100,
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
