@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LaunchScreen extends StatefulWidget {
   const LaunchScreen({Key? key}) : super(key: key);
@@ -13,23 +14,22 @@ class _LaunchScreenState extends State<LaunchScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/home_screen');
+      Navigator.pushReplacementNamed(context, '/login_screen');
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.blue.shade700,
-              Colors.blue.shade100,
-            ],
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          const SizedBox(height: 20,),
+          Image.asset('images/Pattern.png',fit: BoxFit.cover,),
+          Center(
+            child: SvgPicture.asset('images/Logo.svg'),
           ),
-        ),
+        ],
       ),
     );
   }
