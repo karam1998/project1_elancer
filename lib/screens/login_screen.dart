@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/helpers/helpers.dart';
 import 'package:project1/widget/app_text_field.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -9,7 +10,7 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen>with Helpers {
+class _LoginScreenState extends State<LoginScreen> with Helpers {
   late TextEditingController _emailTextController;
   late TextEditingController _passwordTextController;
   late TapGestureRecognizer _tapGestureRecognizer;
@@ -23,7 +24,6 @@ class _LoginScreenState extends State<LoginScreen>with Helpers {
     _emailTextController = TextEditingController();
     _passwordTextController = TextEditingController();
     _tapGestureRecognizer = TapGestureRecognizer();
-
   }
   // void navigateToRegisterScreen() {
   //   Navigator.pushNamed(context, '/register_screen');
@@ -40,96 +40,125 @@ class _LoginScreenState extends State<LoginScreen>with Helpers {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      extendBodyBehindAppBar: true,
 
+
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('LOGIN'),
         centerTitle: true,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
       ),
-      body: ListView(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        children: [
-          const SizedBox(height: 50,),
 
-           const Center(
-             child: Text(
-              'Welcome back',
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 27,
-                wordSpacing: 2,
-
-              ),
+      body: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            colors: [
+              Colors.green.shade900,
+              Colors.green.shade500,
+              Colors.green.shade300,
+            ],
           ),
-           ),
+        ),
 
-           const SizedBox(height: 8,),
-           const Center(
-             child: Text(
-              'Enter your email & password',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 18,
-                wordSpacing: 2,
-              ),
-          ),
-           ),
-          const SizedBox(height: 19),
 
-          AppTextField(
-            hint: 'Email',
-            controller: _emailTextController,
-            prefixIcon: Icons.email,
+        child: Container(
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(80),
+              topRight: Radius.circular(80),
+            )
           ),
-          const SizedBox(height: 10),
-          AppTextField(
-            hint: 'Password',
-            controller: _passwordTextController,
-            prefixIcon: Icons.lock,
-            obscureText: true,
-          ),
-          const SizedBox(height: 35),
-          ElevatedButton(
-            onPressed: () => performLogin(),
-            child: const Text('LOGIN'),
-            style: ElevatedButton.styleFrom(
-              shadowColor: Colors.green,
-              minimumSize: const Size(0, 50),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-
-              ),
-
-            ),
-          ),
-          const SizedBox(height: 10),
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              text: 'Don\'t have an account?',
-              style: const TextStyle(
-                color: Colors.black,
-              ),
+           child: Padding(
+             padding: const EdgeInsets.all(15),
+             child: Column(
               children: [
-                const TextSpan(text: ' '),
-                TextSpan(
-                  recognizer: _tapGestureRecognizer,
-                  text: 'Create Now!',
-                  style: const TextStyle(
-                    color: Colors.blue,
+                const SizedBox(
+                  height: 50,
+                ),
+                SizedBox(height: 60,),
+
+                const Center(
+                  child: Text(
+                    'Welcome back',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 27,
+                      wordSpacing: 2,
+                    ),
                   ),
-                )
+                ),
+
+                const SizedBox(
+                  height: 8,
+                ),
+                const Center(
+                  child: Text(
+                    'Enter your email & password',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      wordSpacing: 2,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 19),
+
+                AppTextField(
+                  hint: 'Email',
+                  controller: _emailTextController,
+                  prefixIcon: Icons.email,
+                ),
+                const SizedBox(height: 10),
+                AppTextField(
+                  hint: 'Password',
+                  controller: _passwordTextController,
+                  prefixIcon: Icons.lock,
+                  obscureText: true,
+                ),
+                const SizedBox(height: 35),
+                ElevatedButton(
+                  onPressed: () => performLogin(),
+                  child: const Text('LOGIN'),
+                  style: ElevatedButton.styleFrom(
+                    shadowColor: Colors.green,
+                    minimumSize: const Size(double.infinity, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    text: 'Don\'t have an account?',
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
+                    children: [
+                      const TextSpan(text: ' '),
+                      TextSpan(
+                        recognizer: _tapGestureRecognizer,
+                        text: 'Create Now!',
+                        style: const TextStyle(
+                          color: Colors.blue,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ],
-            ),
-          ),
-          // TextButton(
-          //   onPressed: () => Navigator.pushNamed(context, '/forget_password_screen'),
-          //   child: const Text("Forget Password?"),
-          // )
-        ],
+        ),
+           ),
+         ),
       ),
     );
   }
@@ -148,16 +177,16 @@ class _LoginScreenState extends State<LoginScreen>with Helpers {
       return true;
     }
     checkErrors();
-    showMessage(message: 'Enter required fields!',error: true);
+    showMessage(message: 'Enter required fields!', error: true);
     return false;
   }
 
   void checkErrors() {
     setState(() {
       _emailErrorText =
-      _emailTextController.text.isEmpty ? 'Enter email address' : null;
+          _emailTextController.text.isEmpty ? 'Enter email address' : null;
       _passwordErrorText =
-      _passwordTextController.text.isEmpty ? 'Enter password' : null ;
+          _passwordTextController.text.isEmpty ? 'Enter password' : null;
     });
   }
 
@@ -167,6 +196,7 @@ class _LoginScreenState extends State<LoginScreen>with Helpers {
       Navigator.pushReplacementNamed(context, '/home_screen');
     });
   }
+
   void showMessage({required String message, bool error = false}) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
