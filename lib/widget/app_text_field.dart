@@ -24,14 +24,16 @@ class AppTextField extends StatelessWidget {
       keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hint,
-        prefixIcon: Icon(prefixIcon),
+        hintStyle: const TextStyle(color: Colors.white70),
+        prefixIcon: Icon(prefixIcon,color: Colors.white,),
         enabledBorder: border(),
-        focusedBorder: border(borderColor: Colors.blue)
+        focusedBorder: border(borderColor: Colors.white70),
+          focusColor: Colors.white
       ),
     );
   }
 
-  OutlineInputBorder border({Color borderColor = Colors.grey}) {
+  OutlineInputBorder border({Color borderColor = Colors.blueGrey}) {
     return OutlineInputBorder(
       borderSide: BorderSide(
         color: borderColor,

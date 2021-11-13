@@ -86,7 +86,6 @@ class _MuslemScreenState extends State<MuslemScreen> {
       ),
     );
   }
-
   Widget userArea({userName, userImage, aboutUser, mainImage}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 5),

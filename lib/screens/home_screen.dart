@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project1/moduls/bn_screen.dart';
+// import 'package:project1/moduls/bn_screen.dart';
 import 'package:project1/moduls/gride_items.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,12 +12,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
-  final List<BnScreen> _bnScreens = <BnScreen>[
-    const BnScreen(title: 'Home', widget: HomeScreen()),
-    // const BnScreen(title: 'Favorites', widget: FavoriteScreen()),
-    // const BnScreen(title: 'Articles', widget: ArticlesScreen()),
-    // const BnScreen(title: 'Settings', widget: SettingsScreen()),
-  ];
+  // final List<BnScreen> _bnScreens = <BnScreen>[
+  //   const BnScreen(title: 'Home', widget: HomeScreen()),
+  //   // const BnScreen(title: 'Favorites', widget: FavoriteScreen()),
+  //   // const BnScreen(title: 'Articles', widget: ArticlesScreen()),
+  //   // const BnScreen(title: 'Settings', widget: SettingsScreen()),
+  // ];
   final List<GridItem> _list = [
     GridItem('Religious',
         "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80"),
