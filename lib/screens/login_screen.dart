@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:project1/helpers/helpers.dart';
 import 'package:project1/widget/app_text_field.dart';
 
@@ -79,6 +80,8 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                    child: Column(
                      mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      const SizedBox(height: 20,),
+                      SvgPicture.asset('images/Logo2.svg'),
                       const SizedBox(
                         height: 40,
                       ),
@@ -88,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                        Container(
                          alignment: Alignment.topLeft,
                         child: const Text(
-                          'Welcome back',
+                          'Welcome back..',
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
@@ -99,7 +102,6 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                           ),
                         ),
                       ),
-
                       const SizedBox(
                         height: 10,
                       ),
@@ -134,9 +136,9 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                         onPressed: () => performLogin(),
                         child: const Text('LOGIN',style: TextStyle(fontSize: 21),),
                         style: ElevatedButton.styleFrom(
-                          elevation: 5,
+                          elevation: 10,
                           enabledMouseCursor:MouseCursor.defer ,
-                          shadowColor: Colors.green,
+                          shadowColor: Colors.white,
                           minimumSize: const Size(double.infinity, 50),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50),

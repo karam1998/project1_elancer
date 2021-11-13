@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 // import 'package:project1/moduls/bn_screen.dart';
 import 'package:project1/moduls/gride_items.dart';
 
@@ -34,121 +35,110 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Text(
-          'SocialBook',
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 28.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.2,
-          ),
-        ),
-        centerTitle: true,
-        // leading: IconButton(
-        //   icon: const Icon(Icons.menu),
-        //   onPressed: () {
-        //     // print('hello');
-        //   },
-        // ),
-        actions: [
-          Container(
-            margin: const EdgeInsets.all(3.0),
-            decoration: BoxDecoration(
-              color: Colors.grey[100],
-              shape: BoxShape.circle,
-            ),
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search),
-              iconSize: 25.0,
-              color: Colors.black,
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.all(3.0),
-            decoration: BoxDecoration(
-              color: Colors.grey[100],
-              shape: BoxShape.circle,
-            ),
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.menu),
-              iconSize: 25.0,
-              color: Colors.black,
-            ),
-          ),
-        ],
-      ),
-      body: ListView(
-        children: [
+      backgroundColor: Colors.white,
+      extendBodyBehindAppBar: true,
+      // appBar: AppBar(
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.circular(30),
+      //   ),
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   title: const Text(
+      //     'SocialBook',
+      //     style: TextStyle(
+      //       color: Colors.blue,
+      //       fontSize: 28.0,
+      //       fontWeight: FontWeight.bold,
+      //       letterSpacing: 1,
+      //       fontFamily: 'SourceSansPro'
+      //     ),
+      //   ),
+      //   centerTitle: true,
+      //   // leading: IconButton(
+      //   //   icon: const Icon(Icons.menu),
+      //   //   onPressed: () {
+      //   //     // print('hello');
+      //   //   },
+      //   // ),
+      //   actions: [
+      //     IconButton(
+      //       onPressed: () {},
+      //       icon: const Icon(Icons.search),
+      //       iconSize: 25.0,
+      //       color: Colors.blue,
+      //     ),
+      //     IconButton(
+      //       onPressed: () {},
+      //       icon: const Icon(Icons.menu),
+      //       iconSize: 25.0,
+      //       color: Colors.blue,
+      //     ),
+      //   ],
+      // ),
+      body: SafeArea(
+        child: ListView(
+          clipBehavior: Clip.hardEdge,
+          shrinkWrap: true,
+          children: [
 
-          SingleChildScrollView(
-            physics: const NeverScrollableScrollPhysics(),
-            child: Container(
+            Container(
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: <Widget>[
-                  Container(
-                    width: double.infinity,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      /**image: DecorationImage(
-                                image: AssetImage(),
-                                fit: BoxFit.cover
-                            )*/
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(
-                              begin: Alignment.bottomRight,
-                              colors: [
-                                Colors.green.withOpacity(.8),
-                                Colors.blue.withOpacity(.8),
-                              ])),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          const Text(
-                            "Category of your social life",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 27,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            height: 40,
-                            margin: const EdgeInsets.symmetric(horizontal: 80),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(50),
-                                color: Colors.white),
-                            child: Center(
-                              child: Text(
-                                "Booking Now",
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.grey[900],
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+
+                  SvgPicture.asset('images/Logo.svg'),
+
+                  // Container(
+                  //   width: double.infinity,
+                  //   height: 130,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(40),
+                  //     /**image: DecorationImage(
+                  //               image: AssetImage(),
+                  //               fit: BoxFit.cover
+                  //           )*/
+                  //   ),
+                  //   child: Container(
+                  //     decoration: BoxDecoration(
+                  //         borderRadius: BorderRadius.only(topRight: Radius.circular(50),bottomLeft: Radius.circular(50)),
+                  //         gradient: LinearGradient(
+                  //             begin: Alignment.bottomRight,
+                  //             colors: [
+                  //               Colors.blueAccent.withOpacity(.2),
+                  //               Colors.blue.withOpacity(.8),
+                  //             ])),
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.end,
+                  //       children: <Widget>[
+                  //         const Text(
+                  //           "Category of your social life",
+                  //           style: TextStyle(
+                  //               color: Colors.black,
+                  //               fontSize: 25,
+                  //               fontWeight: FontWeight.bold),
+                  //         ),
+                  //         const SizedBox(
+                  //           height: 20,
+                  //         ),
+                  //         Center(
+                  //           child: Text(
+                  //             "Booking Now",
+                  //             style: TextStyle(
+                  //                 fontSize: 25,
+                  //                 color: Colors.grey[900],
+                  //                 fontWeight: FontWeight.bold),
+                  //           ),
+                  //         ),
+                  //         const SizedBox(
+                  //           height: 30,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // const SizedBox(
+                  //   height: 20,
+                  // ),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                     child: Row(
@@ -176,9 +166,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        childAspectRatio: 1.0,
-                        crossAxisSpacing: 10.0,
-                        mainAxisSpacing: 10.0,
+                        childAspectRatio: 0.95,
+                        crossAxisSpacing: 1.0,
+                        mainAxisSpacing: 1.0,
                       ),
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, int index) {
@@ -189,8 +179,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
 
@@ -261,7 +251,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: double.infinity,
                 width: double.infinity,
                 fit: BoxFit.cover,
-                color: const Color.fromRGBO(212, 231, 212, 1.0),
+                color: const Color.fromRGBO(250, 250, 182, 1.0),
                 colorBlendMode: BlendMode.modulate),
           ),
           // const SizedBox(height: 20,),
@@ -269,11 +259,12 @@ class _HomeScreenState extends State<HomeScreen> {
             bottom: 15,
             child: Text(
               name,
-              style: const TextStyle(
+              style:  const TextStyle(
                 fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-                backgroundColor: Colors.white54,
+                fontWeight: FontWeight.normal,
+                color: Colors.white,
+                // backgroundColor: Colors.blue.shade400,
+                fontFamily: 'SourceSansPro'
               ),
             ),
           ),

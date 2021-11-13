@@ -21,13 +21,30 @@ class _LaunchScreenState extends State<LaunchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       body: Stack(
         children: [
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration:  const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color(0xFF6392CB),
+                    Color(0xFF61A4F1),
+                    Color(0xFF7DAAE2),
+                  ],
+              ),
+              // color: Colors.white,
+
+            ),
+          ),
           const SizedBox(height: 20,),
           Image.asset('images/Pattern.png',fit: BoxFit.cover,),
           Center(
-            child: SvgPicture.asset('images/Logo.svg'),
+            child: SvgPicture.asset('images/Logo2.svg' ),
           ),
         ],
       ),
