@@ -277,7 +277,7 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
   void login() {
     showMessage(message: 'Logged in successfully');
     Future.delayed(const Duration(seconds: 1), () {
-      Navigator.pushReplacementNamed(context, '/home_screen');
+      Navigator.pushReplacementNamed(context, '/main_screen');
     });
   }
 

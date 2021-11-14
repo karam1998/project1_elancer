@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-// import 'package:project1/moduls/bn_screen.dart';
 import 'package:project1/moduls/gride_items.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,14 +10,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _currentIndex = 0;
-
-  // final List<BnScreen> _bnScreens = <BnScreen>[
-  //   const BnScreen(title: 'Home', widget: HomeScreen()),
-  //   // const BnScreen(title: 'Favorites', widget: FavoriteScreen()),
-  //   // const BnScreen(title: 'Articles', widget: ArticlesScreen()),
-  //   // const BnScreen(title: 'Settings', widget: SettingsScreen()),
-  // ];
   final List<GridItem> _list = [
     GridItem('Religious',
         "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80"),
@@ -80,12 +71,10 @@ class _HomeScreenState extends State<HomeScreen> {
           clipBehavior: Clip.hardEdge,
           shrinkWrap: true,
           children: [
-
             Container(
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: <Widget>[
-
                   SvgPicture.asset('images/Logo.svg'),
 
                   // Container(
@@ -159,78 +148,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   GridView.builder(
-                      clipBehavior: Clip.antiAlias,
-                      shrinkWrap: true,
-                      itemCount: _list.length,
-                      scrollDirection: Axis.vertical,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 0.95,
-                        crossAxisSpacing: 1.0,
-                        mainAxisSpacing: 1.0,
-                      ),
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemBuilder: (context, int index) {
-                        return gridContent(
-                            _list[index].imageURL, _list[index].name, index);
-                      },
+                    clipBehavior: Clip.antiAlias,
+                    shrinkWrap: true,
+                    itemCount: _list.length,
+                    scrollDirection: Axis.vertical,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: 0.95,
+                      crossAxisSpacing: 1.0,
+                      mainAxisSpacing: 1.0,
+                    ),
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, int index) {
+                      return gridContent(
+                          _list[index].imageURL, _list[index].name, index);
+                    },
                   ),
                 ],
               ),
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-
-        onTap: (int value) {
-          setState(() {
-            _currentIndex = value;
-          });
-        },
-        currentIndex: _currentIndex,
-        // type: BottomNavigationBarType.shifting,
-        type: BottomNavigationBarType.fixed,
-
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-
-        backgroundColor: Colors.white,
-        elevation: 10,
-
-        // fixedColor: Colors.pink,
-        selectedItemColor: Colors.blue,
-        selectedIconTheme: IconThemeData(color: Colors.blue.shade700),
-        selectedFontSize: 14,
-        selectedLabelStyle:
-        const TextStyle(letterSpacing: 2),
-        unselectedItemColor: Colors.grey,
-        unselectedIconTheme: IconThemeData(color: Colors.grey.shade700),
-        unselectedFontSize: 12,
-        unselectedLabelStyle:
-        const TextStyle(fontWeight: FontWeight.w300, letterSpacing: 1),
-        iconSize: 25,
-        items: const [
-          BottomNavigationBarItem(
-            backgroundColor: Colors.pink,
-            icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            backgroundColor: Colors.green,
-            icon: Icon(Icons.favorite_border_outlined),
-            activeIcon: Icon(Icons.favorite),
-            label: 'Favorite',
-          ),
-          BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
-            icon: Icon(Icons.settings_outlined),
-            activeIcon: Icon(Icons.settings),
-            label: 'Settings',
-          )
-        ],
       ),
     );
   }
@@ -259,13 +198,12 @@ class _HomeScreenState extends State<HomeScreen> {
             bottom: 15,
             child: Text(
               name,
-              style:  const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.normal,
-                color: Colors.white,
-                // backgroundColor: Colors.blue.shade400,
-                fontFamily: 'SourceSansPro'
-              ),
+              style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white,
+                  // backgroundColor: Colors.blue.shade400,
+                  fontFamily: 'SourceSansPro'),
             ),
           ),
         ]),
