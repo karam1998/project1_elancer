@@ -15,7 +15,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('RELIGIOUS',style: TextStyle(color: Colors.blue,fontSize: 30,fontWeight: FontWeight.bold),),
+        title: const Text(' اشهر قراء القرآن الكريم',style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -177,6 +177,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
                 facebookButton(),
                 instagramButton(),
                 twitterButton(),
+                youtubeButton(),
 
               ],
             ),
@@ -195,8 +196,8 @@ class _MuslemScreenState extends State<MuslemScreen> {
               },
               icon: const Icon(Icons.facebook),
               color: Colors.blue,
-              iconSize: 35),
-          const Text('Facebook',style: TextStyle(fontSize: 12),)
+              iconSize: 28),
+          const Text('Facebook',style: TextStyle(fontSize: 10),)
         ],
       ),
     );
@@ -211,9 +212,9 @@ class _MuslemScreenState extends State<MuslemScreen> {
               onPressed: () {},
               icon: const Icon(FontAwesomeIcons.instagram),
               color: Colors.pink.shade400,
-              iconSize: 35),
+              iconSize: 28),
           // SizedBox(height: 3,),
-          const Text('instagram',style: TextStyle(fontSize: 12),),
+          const Text('instagram',style: TextStyle(fontSize: 10),),
         ],
       ),
     );
@@ -228,10 +229,26 @@ class _MuslemScreenState extends State<MuslemScreen> {
                 onPressed: () {},
                 icon: const Icon(FontAwesomeIcons.twitter),
                 color: Colors.blue,
-                iconSize: 35),
-            const Text('Twitter',style: TextStyle(fontSize: 12),)
+                iconSize: 28),
+            const Text('Twitter',style: TextStyle(fontSize: 10),)
           ],
         ),
+
+    );
+  }
+  Widget youtubeButton() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(FontAwesomeIcons.youtube,color: Colors.red,),
+              color: Colors.blue,
+              iconSize: 28),
+          const Text('Youtube',style: TextStyle(fontSize: 10),)
+        ],
+      ),
 
     );
   }
