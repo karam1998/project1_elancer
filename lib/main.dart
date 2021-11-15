@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:project1/screens/category_screens/muslems_screen.dart';
-import 'package:project1/screens/category_screens/nave_bar_screens/home_screen.dart';
+// import 'package:project1/screens/category_screens/nave_bar_screens/home_screen.dart';
 import 'package:project1/screens/launch_screen.dart';
 import 'package:project1/screens/login_screen.dart';
 import 'package:project1/screens/main_screen.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/out_boarding_screen',
+      initialRoute: '/main_screen',
       routes: {
         '/launch_screen' : (context)=> const LaunchScreen(),
         // '/home_screen':(context) => const HomeScreen(),

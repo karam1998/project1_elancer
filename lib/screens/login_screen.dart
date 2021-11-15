@@ -41,7 +41,6 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
     return Scaffold(
       extendBodyBehindAppBar: true,
 
-
       // backgroundColor: Colors.white,
       // appBar: AppBar(
       //   title: const Text('LOGIN'),
@@ -52,202 +51,231 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
       //   ),
       // ),
 
-      body:Stack(
+      body: Stack(
         children: [
           // SizedBox(height: 80,),
-             Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration:  const BoxDecoration(
-                gradient: LinearGradient(
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                  Color(0xFF6392CB),
-                  Color(0xFF61A4F1),
-                  Color(0xFF7DAAE2),
-                ],
-                  stops: [0.1,0.5,0.8]
-                ),
-                // color: Colors.white,
-
-              ),
-               child: SizedBox(
-                 height: double.infinity,
-                 child: SingleChildScrollView(
-                   physics: const AlwaysScrollableScrollPhysics(),
-                   padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 50),
-                   child: Column(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const SizedBox(height: 20,),
-                      SvgPicture.asset('images/Logo2.svg'),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      // const SizedBox(height: 60,),
-                      const Text('Sign In',style: TextStyle(color: Colors.white,fontSize: 35,fontWeight: FontWeight.bold,fontFamily: 'SourceSansPro'),),
-                      const SizedBox(height: 30,),
-                       Container(
-                         alignment: Alignment.topLeft,
-                        child: const Text(
-                          'Welcome back..',
-                          style: TextStyle(
+                    Color(0xFF6392CB),
+                    Color(0xFF61A4F1),
+                    Color(0xFF7DAAE2),
+                  ],
+                  stops: [
+                    0.1,
+                    0.5,
+                    0.8
+                  ]),
+              // color: Colors.white,
+            ),
+            child: SizedBox(
+              height: double.infinity,
+              child: SingleChildScrollView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 50),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    SvgPicture.asset('images/Logo2.svg'),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    // const SizedBox(height: 60,),
+                    const Text(
+                      'Sign In',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'SourceSansPro'),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        'Welcome back..',
+                        style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
                             fontSize: 30,
                             wordSpacing: 1,
-                            fontFamily: 'SourceSansPro'
-
-                          ),
+                            fontFamily: 'SourceSansPro'),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        'Enter your email & password',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          wordSpacing: 1,
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
+                    ),
+                    const SizedBox(height: 20),
+
+                    AppTextField(
+                      hint: 'Email', controller: _emailTextController,
+                      prefixIcon: Icons.email,
+                    ),
+                    const SizedBox(height: 20),
+                    AppTextField(
+                      hint: 'Password',
+                      controller: _passwordTextController,
+                      prefixIcon: Icons.lock,
+                      obscureText: true,
+                    ),
+                    const SizedBox(height: 25),
+                    ElevatedButton(
+                      onPressed: () => performLogin(),
+                      child: const Text(
+                        'LOGIN',
+                        style: TextStyle(fontSize: 21),
                       ),
-                      Container(
-                        alignment: Alignment.topLeft,
-                        child: const Text(
-                          'Enter your email & password',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            wordSpacing: 1,
-                          ),
+                      style: ElevatedButton.styleFrom(
+                        elevation: 10,
+                        enabledMouseCursor: MouseCursor.defer,
+                        shadowColor: Colors.white,
+                        minimumSize: const Size(double.infinity, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
                         ),
                       ),
-                      const SizedBox(height: 20),
-
-                      AppTextField(
-                        hint: 'Email',
-                        controller: _emailTextController,
-                        prefixIcon: Icons.email,
-
+                    ),
+                    const SizedBox(height: 25),
+                    const Text(
+                      '- OR -',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Text(
+                      ' Sign In With ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400,
                       ),
-                      const SizedBox(height: 20),
-                      AppTextField(
-                        hint: 'Password',
-                        controller: _passwordTextController,
-                        prefixIcon: Icons.lock,
-                        obscureText: true,
-                      ),
-                      const SizedBox(height: 25),
-                      ElevatedButton(
-                        onPressed: () => performLogin(),
-                        child: const Text('LOGIN',style: TextStyle(fontSize: 21),),
-                        style: ElevatedButton.styleFrom(
-                          elevation: 10,
-                          enabledMouseCursor:MouseCursor.defer ,
-                          shadowColor: Colors.white,
-                          minimumSize: const Size(double.infinity, 50),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50),
-
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 25),
-                      const Text('- OR -',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500, fontSize: 20),),
-                      const SizedBox(height: 20,),
-                      const Text(' Sign In With ', style:TextStyle(fontSize: 18,color: Colors.white,fontWeight: FontWeight.w400,),),
-                      const SizedBox(height: 20,),
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            GestureDetector(
-                                onTap: (){
-                                  // print('Facebook');
-                                },
-                                child: Container(
-                                  height: 50,
-                                  width: 50,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.white,
-                                      boxShadow: [
-                                        BoxShadow(color: Colors.black87,offset: Offset(0,2),blurRadius: 5.0),
-                                      ],
-                                      image:DecorationImage(
-                                        image: AssetImage('images/facebook2.png'),
-                                      )
-                                  ),
-                                ),
-
-
-                              // RichText(
-                              //   textAlign: TextAlign.center,
-                              //   text: TextSpan(
-                              //     text: 'Don\'t have an account?',
-                              //     style: const TextStyle(
-                              //       color: Colors.black,
-                              //     ),
-                              //     children: [
-                              //       const TextSpan(text: ' '),
-                              //       TextSpan(
-                              //         recognizer: _tapGestureRecognizer,
-                              //         text: 'Create Now!',
-                              //         style: const TextStyle(
-                              //           color: Colors.blue,
-                              //         ),
-                              //       )
-                              //     ],
-                              //   ),
-                              // ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {
+                              // print('Facebook');
+                            },
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black87,
+                                        offset: Offset(0, 2),
+                                        blurRadius: 5.0),
+                                  ],
+                                  image: DecorationImage(
+                                    image: AssetImage('images/facebook2.png'),
+                                  )),
                             ),
-                            GestureDetector(
-                              onTap: (){
-                                // print('google');
-                              },
-                              child: Container(
-                                height: 50,
-                                width: 50,
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(color: Colors.black87,offset: Offset(0,2),blurRadius: 7.0),
-                                    ],
-                                    image:DecorationImage(
-                                      image: AssetImage('images/google.png'),
-                                    )
-                                ),
-                              ),
 
-
-                              // RichText(
-                              //   textAlign: TextAlign.center,
-                              //   text: TextSpan(
-                              //     text: 'Don\'t have an account?',
-                              //     style: const TextStyle(
-                              //       color: Colors.black,
-                              //     ),
-                              //     children: [
-                              //       const TextSpan(text: ' '),
-                              //       TextSpan(
-                              //         recognizer: _tapGestureRecognizer,
-                              //         text: 'Create Now!',
-                              //         style: const TextStyle(
-                              //           color: Colors.blue,
-                              //         ),
-                              //       )
-                              //     ],
-                              //   ),
-                              // ),
+                            // RichText(
+                            //   textAlign: TextAlign.center,
+                            //   text: TextSpan(
+                            //     text: 'Don\'t have an account?',
+                            //     style: const TextStyle(
+                            //       color: Colors.black,
+                            //     ),
+                            //     children: [
+                            //       const TextSpan(text: ' '),
+                            //       TextSpan(
+                            //         recognizer: _tapGestureRecognizer,
+                            //         text: 'Create Now!',
+                            //         style: const TextStyle(
+                            //           color: Colors.blue,
+                            //         ),
+                            //       )
+                            //     ],
+                            //   ),
+                            // ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              // print('google');
+                            },
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black87,
+                                        offset: Offset(0, 2),
+                                        blurRadius: 7.0),
+                                  ],
+                                  image: DecorationImage(
+                                    image: AssetImage('images/google.png'),
+                                  )),
                             ),
-                          ],
-                        ),
-                      ),
 
-                    ],
+                            // RichText(
+                            //   textAlign: TextAlign.center,
+                            //   text: TextSpan(
+                            //     text: 'Don\'t have an account?',
+                            //     style: const TextStyle(
+                            //       color: Colors.black,
+                            //     ),
+                            //     children: [
+                            //       const TextSpan(text: ' '),
+                            //       TextSpan(
+                            //         recognizer: _tapGestureRecognizer,
+                            //         text: 'Create Now!',
+                            //         style: const TextStyle(
+                            //           color: Colors.blue,
+                            //         ),
+                            //       )
+                            //     ],
+                            //   ),
+                            // ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
-                 ),
-               ),
-             ),
-           ],
+        ],
       ),
-
     );
   }
 
@@ -270,8 +298,7 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
   }
 
   void checkErrors() {
-    setState(() {
-    });
+    setState(() {});
   }
 
   void login() {

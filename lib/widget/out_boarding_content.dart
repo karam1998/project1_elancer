@@ -1,9 +1,16 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class OutBoardingContent extends StatelessWidget {
   const OutBoardingContent({
     Key? key,
+
+
+
   }) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +25,8 @@ class OutBoardingContent extends StatelessWidget {
           // SvgPicture.asset('images/learn.png')
           Image(image: AssetImage('images/learn.png'),),
           SizedBox(height: 10),
-          Text(
-            'This is main title',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Text(
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
+
+          Text('',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,

@@ -12,17 +12,26 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final List<GridItem> _list = [
     GridItem('Religious',
-        "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80"),
+        "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80",GestureDetector(
+          onTap: ()  {print('gest1');},
+        )),
     GridItem('Economical',
-        "https://images.unsplash.com/photo-1605792657660-596af9009e82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80"),
+        "https://images.unsplash.com/photo-1605792657660-596af9009e82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80",GestureDetector(
+  onTap: (){print('gest2');},
+  )
+        ),
     GridItem('influential',
-        "https://images.unsplash.com/photo-1527867006146-ff7dcb1a9cb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"),
-    GridItem('inspiring', "https://blog.bonus.ly/hubfs/inspire-teams.png"),
+        "https://images.unsplash.com/photo-1527867006146-ff7dcb1a9cb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80",GestureDetector(onTap: (){print('gest3');})),
+    GridItem('inspiring', "https://blog.bonus.ly/hubfs/inspire-teams.png",GestureDetector(onTap: (){print('gest3');},
+  )),
     GridItem('Famous',
-        "https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=476&q=80"),
+        "https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=476&q=80",GestureDetector(onTap: (){print('gest4');},
+  )),
     GridItem('Famous',
-        "https://images.unsplash.com/photo-1527867006146-ff7dcb1a9cb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"),
+        "https://images.unsplash.com/photo-1527867006146-ff7dcb1a9cb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80",GestureDetector(onTap: (){print('gest5');},
+  )),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -162,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, int index) {
                       return gridContent(
-                          _list[index].imageURL, _list[index].name, index);
+                          _list[index].imageURL, _list[index].name, index,GestureDetector );
                     },
                   ),
                 ],
@@ -174,17 +183,18 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  gridContent(String image, String name, int index) {
+  gridContent(String image, String name, int index, Object gestureDetector,) {
     return GestureDetector(
-      // onTap: (){print('tabbed');},
-      // onDoubleTap: (){print('double click');},
+      onTap: (){print(_list[index].gestureDetector);},
       child: Card(
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
         // color: Colors.green,
-        child: Stack(alignment: Alignment.center, children: [
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
           Center(
             child: Image.network(image,
                 height: double.infinity,
@@ -206,7 +216,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontFamily: 'SourceSansPro'),
             ),
           ),
-        ]),
+        ],
+        ),
       ),
     );
   }
