@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MuslemScreen extends StatefulWidget {
@@ -18,7 +19,9 @@ class _MuslemScreenState extends State<MuslemScreen> {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_back_ios,color: Colors.blue,),padding: const EdgeInsets.only(left: 7),),
+        leading: IconButton(onPressed: (){
+          Navigator.pushReplacementNamed(context, '/main_screen');
+        }, icon: const Icon(Icons.arrow_back_ios,color: Colors.blue,),padding: const EdgeInsets.only(left: 7),),
 
 
       ),
@@ -29,48 +32,48 @@ class _MuslemScreenState extends State<MuslemScreen> {
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(15),
                   child: Column(
                     children: [
-                      const SizedBox(height: 20,),
-                      const Text(
-                        'Category of Muslims ',
-                        style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
+                      // const Text(
+                      //   'Category of Muslims ',
+                      //   style: TextStyle(
+                      //       fontSize: 25,
+                      //       fontWeight: FontWeight.bold,
+                      //       color: Colors.black),
+                      // ),
+                      SvgPicture.asset('images/Logo.svg' ),
                       const SizedBox(
                         height: 20,
                       ),
 
                       userArea(
-                          userName: 'karam shaat',
+                          userName: 'Abdulrahman Alsudais',
                           aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                          mainImage: 'images/1.jpg',
-                          userImage: 'images/1.jpg',
+                          mainImage: '',
+                          userImage: 'images/sodase.jpg',
                           ),
                       const Divider(thickness: 1,color: Colors.grey,),
 
                       userArea(
-                          userName: 'karam shaat',
+                          userName: 'Maher Almaikulai',
                         aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: '',
-                          userImage: 'images/3.jpg', ),
+                        mainImage: 'images/moaqle2.jpg',
+                          userImage: 'images/moaqle.jpg', ),
                       const Divider(thickness: 1,color: Colors.grey,),
 
                       userArea(
-                          userName: 'karam shaat',
+                          userName: 'Mashary Alafasy',
                         aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: 'images/4.jpg',
-                          userImage: 'images/2.jpg',
+                        mainImage: 'images/afasy2.jpg',
+                          userImage: 'images/afasy.jpg',
                          ),
                       const Divider(thickness: 1,color: Colors.grey,),
                       userArea(
-                        userImage: 'images/9.jpg',
+                        userImage: 'images/fares.jpg',
                         aboutUser: 'Smart System Engineering',
-                        mainImage: 'images/7.jpg',
-                        userName: 'Alaa Shaat'
+                        mainImage: '',
+                        userName: 'Fares Abbad'
                       ),
                       const Divider(thickness: 1,color: Colors.grey,),
 

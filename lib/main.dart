@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/main_screen',
+      initialRoute: '/muslem_screen',
       routes: {
         '/launch_screen' : (context)=> const LaunchScreen(),
         // '/home_screen':(context) => const HomeScreen(),
