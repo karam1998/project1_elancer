@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-class MuslemScreen extends StatefulWidget {
-  const MuslemScreen({Key? key}) : super(key: key);
+class RecitersScreen extends StatefulWidget {
+  const RecitersScreen({Key? key}) : super(key: key);
 
   @override
-  _MuslemScreenState createState() => _MuslemScreenState();
+  _RecitersScreenState createState() => _RecitersScreenState();
 }
 
-class _MuslemScreenState extends State<MuslemScreen> {
+class _RecitersScreenState extends State<RecitersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text(' الدعاه',style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.bold),),
+        title: const Text(' اشهر قراء القرآن الكريم',style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -48,37 +47,43 @@ class _MuslemScreenState extends State<MuslemScreen> {
                       ),
 
                       userArea(
-                          userName: 'Abdulrahman Alsudais',
-                          aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                          mainImage: '',
-                          userImage: 'images/sodase.jpg',
-                          ),
-                      const Divider(thickness: 1,color: Colors.grey,),
-
-                      userArea(
-                          userName: 'Maher Almaikulai',
+                        userName: 'Abdulrahman Alsudais',
                         aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: 'images/moaqle2.jpg',
-                          userImage: 'images/moaqle.jpg', ),
-                      const Divider(thickness: 1,color: Colors.grey,),
-
-                      userArea(
-                          userName: 'Mashary Alafasy',
-                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: 'images/afasy2.jpg',
-                          userImage: 'images/afasy.jpg',
-                         ),
-                      const Divider(thickness: 1,color: Colors.grey,),
-                      userArea(
-                        userImage: 'images/fares.jpg',
-                        aboutUser: 'Smart System Engineering',
                         mainImage: '',
-                        userName: 'Fares Abbad'
+                        userImage: 'images/sodase.jpg',
                       ),
                       const Divider(thickness: 1,color: Colors.grey,),
 
+                      userArea(
+                        userName: 'Maher Almaikulai',
+                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
+                        mainImage: 'images/moaqle2.jpg',
+                        userImage: 'images/moaqle.jpg', ),
                       const Divider(thickness: 1,color: Colors.grey,),
 
+                      userArea(
+                        userName: 'Mashary Alafasy',
+                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
+                        mainImage: 'images/afasy2.jpg',
+                        userImage: 'images/afasy.jpg',
+                      ),
+                      const Divider(thickness: 1,color: Colors.grey,),
+                      userArea(
+                        userImage: 'images/islam.jpg',
+                        userName: 'Islam Sobhi',
+                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+                        mainImage: '',
+
+
+                      ),
+                      const Divider(thickness: 1,color: Colors.grey,),
+                      userArea(
+                          userImage: 'images/fares.jpg',
+                          aboutUser: 'Smart System Engineering',
+                          mainImage: '',
+                          userName: 'Fares Abbad'
+                      ),
+                      const Divider(thickness: 1,color: Colors.grey,),
 
 
 
@@ -92,6 +97,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
       ),
     );
   }
+
   Widget userArea({userName, userImage, aboutUser, mainImage}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 5),
@@ -107,9 +113,9 @@ class _MuslemScreenState extends State<MuslemScreen> {
                     width: 50,
                     height: 50,
                     decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            image: AssetImage(userImage), fit: BoxFit.cover),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: AssetImage(userImage), fit: BoxFit.cover),
                     ),
                   ),
                   const SizedBox(
@@ -162,12 +168,12 @@ class _MuslemScreenState extends State<MuslemScreen> {
           ),
           mainImage != ''
               ? Container(
-                  height: 200,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: AssetImage(mainImage), fit: BoxFit.contain)),
-                )
+            height: 200,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    image: AssetImage(mainImage), fit: BoxFit.cover)),
+          )
               : Container(),
           const SizedBox(
             height: 0,
@@ -225,17 +231,17 @@ class _MuslemScreenState extends State<MuslemScreen> {
 
   Widget twitterButton() {
     return Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(FontAwesomeIcons.twitter),
-                color: Colors.blue,
-                iconSize: 28),
-            const Text('Twitter',style: TextStyle(fontSize: 10),)
-          ],
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(FontAwesomeIcons.twitter),
+              color: Colors.blue,
+              iconSize: 28),
+          const Text('Twitter',style: TextStyle(fontSize: 10),)
+        ],
+      ),
 
     );
   }
