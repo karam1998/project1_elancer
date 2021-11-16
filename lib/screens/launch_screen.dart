@@ -41,8 +41,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
 
             ),
           ),
-          const SizedBox(height: 20,),
-          Image.asset('images/Pattern.png',fit: BoxFit.cover,),
+          Image.asset('images/Pattern.png'),
           Center(
             child: SvgPicture.asset('images/Logo2.svg' ),
           ),
