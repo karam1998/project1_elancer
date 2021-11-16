@@ -24,11 +24,11 @@ class AppTextField extends StatelessWidget {
       keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: const TextStyle(color: Colors.white70),
-        prefixIcon: Icon(prefixIcon,color: Colors.white,),
+        hintStyle: const TextStyle(color: Colors.blueGrey),
+        prefixIcon: Icon(prefixIcon,color: Colors.blueAccent,),
         enabledBorder: border(),
-        focusedBorder: border(borderColor: Colors.white70),
-          focusColor: Colors.white
+        focusedBorder: border(borderColor: Colors.blue),
+          focusColor: Colors.blue
       ),
     );
   }
@@ -39,7 +39,7 @@ class AppTextField extends StatelessWidget {
         color: borderColor,
         width: 1,
       ),
-      borderRadius: BorderRadius.circular(15),
+      borderRadius: BorderRadius.circular(20),
     );
   }
 }
