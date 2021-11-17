@@ -23,13 +23,15 @@ class AppTextField extends StatelessWidget {
       obscureText: obscureText,
       keyboardType: keyboardType,
       decoration: InputDecoration(
-        hintText: hint,
-        hintStyle: const TextStyle(color: Colors.blueGrey),
-        prefixIcon: Icon(prefixIcon,color: Colors.blueAccent,),
-        enabledBorder: border(),
-        focusedBorder: border(borderColor: Colors.blue),
-          focusColor: Colors.blue
-      ),
+          hintText: hint,
+          hintStyle: const TextStyle(color: Colors.blueGrey),
+          prefixIcon: Icon(
+            prefixIcon,
+            color: Colors.blueAccent,
+          ),
+          enabledBorder: border(),
+          focusedBorder: border(borderColor: Colors.blue),
+          focusColor: Colors.blue),
     );
   }
 

@@ -3,6 +3,7 @@ import 'package:project1/moduls/bn_screen.dart';
 import 'package:project1/screens/category_screens/nave_bar_screens/favorite_screen.dart';
 import 'package:project1/screens/category_screens/nave_bar_screens/home_screen.dart';
 import 'package:project1/screens/category_screens/nave_bar_screens/setting_screen.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -53,10 +54,10 @@ class _MainScreenState extends State<MainScreen> {
         unselectedIconTheme: IconThemeData(color: Colors.grey.shade700),
         unselectedFontSize: 12,
         unselectedLabelStyle:
-        const TextStyle(fontWeight: FontWeight.w300, letterSpacing: 1),
+            const TextStyle(fontWeight: FontWeight.w300, letterSpacing: 1),
 
-        iconSize:20,
-        items:  const [
+        iconSize: 20,
+        items: const [
           BottomNavigationBarItem(
             // backgroundColor: Colors.blue,
             icon: Icon(Icons.home_outlined),

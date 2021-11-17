@@ -14,6 +14,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> with Helpers {
   late TextEditingController _emailTextController;
   late TextEditingController _passwordTextController;
+
   // late TapGestureRecognizer _tapGestureRecognizer;
 
   @override
@@ -24,6 +25,7 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
     _passwordTextController = TextEditingController();
     // _tapGestureRecognizer = TapGestureRecognizer();
   }
+
   // void navigateToRegisterScreen() {
   //   Navigator.pushNamed(context, '/register_screen');
   // }
@@ -77,7 +79,8 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
               height: double.infinity,
               child: SingleChildScrollView(
                 physics: const NeverScrollableScrollPhysics(),
-                padding:const EdgeInsets.symmetric(horizontal: 0, vertical:80),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 0, vertical: 80),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -104,7 +107,10 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                     Container(
                       decoration: const BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight: Radius.circular(40)),                        ),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(40),
+                            topRight: Radius.circular(40)),
+                      ),
                       child: Padding(
                         padding: const EdgeInsets.all(30.0),
                         child: Column(
@@ -113,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                             Container(
                               width: double.infinity,
                               alignment: Alignment.center,
-                              child:  Text(
+                              child: Text(
                                 'Welcome back..',
                                 style: TextStyle(
                                     color: Colors.blue.shade900,
@@ -139,7 +145,8 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                             ),
                             const SizedBox(height: 25),
                             AppTextField(
-                              hint: 'Email', controller: _emailTextController,
+                              hint: 'Email',
+                              controller: _emailTextController,
                               prefixIcon: Icons.email,
                             ),
                             const SizedBox(height: 20),
@@ -191,7 +198,8 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                             Padding(
                               padding: const EdgeInsets.all(10),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   GestureDetector(
                                     onTap: () {
@@ -210,7 +218,8 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                                                 blurRadius: 5.0),
                                           ],
                                           image: DecorationImage(
-                                            image: AssetImage('images/facebook2.png'),
+                                            image: AssetImage(
+                                                'images/facebook2.png'),
                                           )),
                                     ),
 
@@ -251,7 +260,8 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                                                 blurRadius: 7.0),
                                           ],
                                           image: DecorationImage(
-                                            image: AssetImage('images/google.png'),
+                                            image:
+                                                AssetImage('images/google.png'),
                                           )),
                                     ),
 
@@ -278,7 +288,6 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                                 ],
                               ),
                             ),
-
                           ],
                         ),
                       ),

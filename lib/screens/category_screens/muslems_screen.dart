@@ -60,6 +60,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
                         aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
                         mainImage: 'images/moaqle2.jpg',
                           userImage: 'images/moaqle.jpg', ),
+
                       const Divider(thickness: 1,color: Colors.grey,),
 
                       userArea(
@@ -76,11 +77,6 @@ class _MuslemScreenState extends State<MuslemScreen> {
                         userName: 'Fares Abbad'
                       ),
                       const Divider(thickness: 1,color: Colors.grey,),
-
-                      const Divider(thickness: 1,color: Colors.grey,),
-
-
-
 
                     ],
                   ),

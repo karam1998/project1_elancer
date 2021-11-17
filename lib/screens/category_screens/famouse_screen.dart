@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class RecitersScreen extends StatefulWidget {
-  const RecitersScreen({Key? key}) : super(key: key);
+class FamouseScreen extends StatefulWidget {
+  const FamouseScreen({Key? key}) : super(key: key);
 
   @override
-  _RecitersScreenState createState() => _RecitersScreenState();
+  _FamouseScreenState createState() => _FamouseScreenState();
 }
 
-class _RecitersScreenState extends State<RecitersScreen> {
+class _FamouseScreenState extends State<FamouseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text(
-          ' اشهر قراء القرآن الكريم',
+          'المؤثرون',
           style: TextStyle(
               color: Colors.blue, fontSize: 28, fontWeight: FontWeight.bold),
         ),
@@ -55,19 +55,57 @@ class _RecitersScreenState extends State<RecitersScreen> {
                       const SizedBox(
                         height: 20,
                       ),
-
                       userArea(
-                        userName: 'Abdulrahman Alsudais',
+                          userImage: 'images/shqare2.jpg',
+                          aboutUser:
+                              'باحث عن السلام الداخلي في وسط ضعفي البشري',
+                          mainImage: 'images/shqare1.png',
+                          userName: 'Ahmad AlShugairi'),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                          userName: 'Hala Samer',
+                          userImage: 'images/hala.jpg',
+                          aboutUser:
+                              'لمستشار الأسري والتربوي ومستشار صحة نفسية',
+                          mainImage: 'images/hala1.jpg'),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                          userName: 'Yasser Mamdouh',
+                          userImage: 'images/yaser.jpg',
+                          aboutUser:
+                              'لمستشار الأسري والتربوي ومستشار صحة نفسية',
+                          mainImage: 'images/yaser2.jpg'),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                          userName: 'Dr.Tareq AlSuwaidan',
+                          userImage: 'images/tareq.jpg',
+                          aboutUser:
+                              ' باحث وكاتب، وداعية إسلامي، ومؤرخ، وإعلامي، ومدرب في الإدارة والقيادة.',
+                          mainImage: 'images/tareq.jpg'),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                        userName: 'Mahmoud AlHasanat ',
                         aboutUser:
                             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
                         mainImage: '',
-                        userImage: 'images/sodase.jpg',
+                        userImage: 'images/hasanat.jpg',
                       ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
                       ),
-
                       userArea(
                         userName: 'Maher Almaikulai',
                         aboutUser:
@@ -86,17 +124,6 @@ class _RecitersScreenState extends State<RecitersScreen> {
                             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
                         mainImage: 'images/afasy2.jpg',
                         userImage: 'images/afasy.jpg',
-                      ),
-                      const Divider(
-                        thickness: 1,
-                        color: Colors.grey,
-                      ),
-                      userArea(
-                        userImage: 'images/islam.jpg',
-                        userName: 'Islam Sobhi',
-                        aboutUser:
-                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-                        mainImage: '',
                       ),
                       const Divider(
                         thickness: 1,
@@ -122,7 +149,7 @@ class _RecitersScreenState extends State<RecitersScreen> {
     );
   }
 
-  Widget userArea({userName, userImage, aboutUser, mainImage}) {
+  userArea({userName, userImage, aboutUser, mainImage}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 5),
       child: Column(
@@ -196,7 +223,7 @@ class _RecitersScreenState extends State<RecitersScreen> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                          image: AssetImage(mainImage), fit: BoxFit.cover)),
+                          image: AssetImage(mainImage), fit: BoxFit.contain)),
                 )
               : Container(),
           const SizedBox(
@@ -213,13 +240,13 @@ class _RecitersScreenState extends State<RecitersScreen> {
                 youtubeButton(),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
   }
 
-  Widget facebookButton() {
+  facebookButton() {
     return Center(
       child: Column(
         children: [
@@ -237,7 +264,7 @@ class _RecitersScreenState extends State<RecitersScreen> {
     );
   }
 
-  Widget instagramButton() {
+  instagramButton() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -257,7 +284,7 @@ class _RecitersScreenState extends State<RecitersScreen> {
     );
   }
 
-  Widget twitterButton() {
+  twitterButton() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -276,7 +303,7 @@ class _RecitersScreenState extends State<RecitersScreen> {
     );
   }
 
-  Widget youtubeButton() {
+  youtubeButton() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -46,8 +46,12 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
             child: Visibility(
               visible: _currentPage < 2,
               replacement: TextButton(
-                onPressed: () => Navigator.pushReplacementNamed(context, '/login_screen'),
-                child: const Text('START',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                onPressed: () =>
+                    Navigator.pushReplacementNamed(context, '/login_screen'),
+                child: const Text(
+                  'START',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
               ),
               child: TextButton(
                 onPressed: () => _pageController.animateToPage(
@@ -74,16 +78,18 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                   _currentPage = index;
                 });
               },
-              itemBuilder: (_, index){
+              itemBuilder: (_, index) {
                 return Padding(
-                  padding: EdgeInsets.only(left: 10,right: 10),
+                  padding: EdgeInsets.only(left: 10, right: 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Image.asset(screen[index].imag),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -95,7 +101,8 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                             },
                             icon: Icon(
                               Icons.arrow_back_ios,
-                              color: _currentPage > 0 ? Colors.black : Colors.grey,
+                              color:
+                                  _currentPage > 0 ? Colors.black : Colors.grey,
                             ),
                           ),
                           Visibility(
@@ -118,8 +125,10 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          OutBoardingIndicator(marginEnd: 10, selected: _currentPage == 0),
-                          OutBoardingIndicator(marginEnd: 10, selected: _currentPage == 1),
+                          OutBoardingIndicator(
+                              marginEnd: 10, selected: _currentPage == 0),
+                          OutBoardingIndicator(
+                              marginEnd: 10, selected: _currentPage == 1),
                           OutBoardingIndicator(selected: _currentPage == 2),
                         ],
                       ),
@@ -132,23 +141,25 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: ElevatedButton(
-
-                            onPressed: () => Navigator.pushReplacementNamed(context, '/login_screen'),
-                            child: const Text('START',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 1),),
+                            onPressed: () => Navigator.pushReplacementNamed(
+                                context, '/login_screen'),
+                            child: const Text(
+                              'START',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1),
+                            ),
                             style: ElevatedButton.styleFrom(
                               minimumSize: const Size(double.infinity, 50),
                             ),
                           ),
                         ),
                       ),
-
-
-
                     ],
                   ),
                 );
               },
-
             ),
           ),
         ],

@@ -15,7 +15,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('الموؤثرون',style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.bold),),
+        title: const Text('المؤثرون',style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -53,8 +53,6 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                           userName: 'Ahmad AlShugairi'
                       ),
                       const Divider(thickness: 1,color: Colors.grey,),
-
-
                       userArea(
                         userName: 'Hala Samer',
                         userImage:'images/hala.jpg',
@@ -83,7 +81,6 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                         userImage: 'images/hasanat.jpg',
                       ),
                       const Divider(thickness: 1,color: Colors.grey,),
-
                       userArea(
                         userName: 'Maher Almaikulai',
                         aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
@@ -105,9 +102,6 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                           userName: 'Fares Abbad'
                       ),
                       const Divider(thickness: 1,color: Colors.grey,),
-
-
-
                     ],
                   ),
                 ),
@@ -210,7 +204,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
 
               ],
             ),
-          )
+          ),
         ],
       ),
     );

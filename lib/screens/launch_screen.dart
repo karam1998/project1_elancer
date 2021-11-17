@@ -27,23 +27,22 @@ class _LaunchScreenState extends State<LaunchScreen> {
           Container(
             height: double.infinity,
             width: double.infinity,
-            decoration:  const BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xFF6392CB),
-                    Color(0xFF61A4F1),
-                    Color(0xFF7DAAE2),
-                  ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xFF6392CB),
+                  Color(0xFF61A4F1),
+                  Color(0xFF7DAAE2),
+                ],
               ),
               // color: Colors.white,
-
             ),
           ),
           Image.asset('images/Pattern.png'),
           Center(
-            child: SvgPicture.asset('images/Logo2.svg' ),
+            child: SvgPicture.asset('images/Logo2.svg'),
           ),
         ],
       ),

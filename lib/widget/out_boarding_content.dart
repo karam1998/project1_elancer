@@ -5,12 +5,7 @@ import 'package:flutter/material.dart';
 class OutBoardingContent extends StatelessWidget {
   const OutBoardingContent({
     Key? key,
-
-
-
   }) : super(key: key);
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +13,18 @@ class OutBoardingContent extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children:  const [
+        children: const [
           // CircleAvatar(
           //   radius: 55,
           // ),
           // SvgPicture.asset('images/learn.png')
-          Image(image: AssetImage('images/learn.png'),),
+          Image(
+            image: AssetImage('images/learn.png'),
+          ),
           SizedBox(height: 10),
 
-          Text('',
+          Text(
+            '',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,
