@@ -15,15 +15,24 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('المؤثرون',style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.bold),),
+        title: const Text(
+          'المؤثرون',
+          style: TextStyle(
+              color: Colors.blue, fontSize: 28, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(onPressed: (){
-          Navigator.pushReplacementNamed(context, '/main_screen');
-        }, icon: const Icon(Icons.arrow_back_ios,color: Colors.blue,),padding: const EdgeInsets.only(left: 7),),
-
-
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/main_screen');
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.blue,
+          ),
+          padding: const EdgeInsets.only(left: 7),
+        ),
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -42,66 +51,524 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                       //       fontWeight: FontWeight.bold,
                       //       color: Colors.black),
                       // ),
-                      SvgPicture.asset('images/Logo.svg' ),
+                      SvgPicture.asset('images/Logo.svg'),
                       const SizedBox(
                         height: 20,
                       ),
                       userArea(
                           userImage: 'images/shqare2.jpg',
-                          aboutUser: 'باحث عن السلام الداخلي في وسط ضعفي البشري',
+                          aboutUser:
+                              'علامي سعودي. بدأ بتقديم برامج فكرية اجتماعية ومضيف السلسلة التلفازية خواطر والمضيف السابق لبرنامج يلا شباب، ألّف برامج تلفازية حول مساعدة الشباب على النضج في أفكارهم والبذل في خدمة إيمانهم وتطوير مهاراتهم واكتشاف معرفتهم بالعالم وبدورهم في جعله مكاناً أفضل.',
                           mainImage: 'images/shqare1.png',
-                          userName: 'Ahmad AlShugairi'
+                          userName: 'أحمد الشقيري'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      const Divider(thickness: 1,color: Colors.grey,),
-                      userArea(
-                        userName: 'Hala Samer',
-                        userImage:'images/hala.jpg',
-                        aboutUser: 'لمستشار الأسري والتربوي ومستشار صحة نفسية',
-                        mainImage: 'images/hala1.jpg'
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
                       ),
-                      const Divider(thickness: 1,color: Colors.grey,),
                       userArea(
-                          userName: 'Yasser Mamdouh',
-                          userImage:'images/yaser.jpg',
-                          aboutUser: 'لمستشار الأسري والتربوي ومستشار صحة نفسية',
-                          mainImage: 'images/yaser2.jpg'
+                          userName: 'د.هاله سامر',
+                          userImage: 'images/hala.jpg',
+                          aboutUser: 'استشاري الصحة النفسية ومدربة تنمية بشرية',
+                          mainImage: 'images/hala1.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      const Divider(thickness: 1,color: Colors.grey,),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
                       userArea(
-                          userName: 'Dr.Tareq AlSuwaidan',
+                          userName: 'ياسر ممدوح',
+                          userImage: 'images/yaser.jpg',
+                          aboutUser:
+                              'يعتبر من الشخصيات التي حظيت باهتمام كبير في دول مختلفة في الوطن العربي، وهو أيضًا من الأشخاص الذين تعلموا العديد من الأعمال المختلفة ونال إعجاب الكثير من الناس في مختلف دول العالم العربي في أشياء كثيرة.',
+                          mainImage: 'images/yaser2.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                          userName: 'د. طارق السويدان',
                           userImage: 'images/tareq.jpg',
-                          aboutUser: ' باحث وكاتب، وداعية إسلامي، ومؤرخ، وإعلامي، ومدرب في الإدارة والقيادة.',
-                          mainImage: 'images/tareq.jpg'
+                          aboutUser:
+                              ' باحث وكاتب، وداعية إسلامي، ومؤرخ، وإعلامي، ومدرب في الإدارة والقيادة.',
+                          mainImage: 'images/tareq.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      const Divider(thickness: 1,color: Colors.grey,),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
                       userArea(
-                        userName: 'Mahmoud AlHasanat ',
-                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: '',
+                        userName: 'محمود الحسنات',
+                        aboutUser:
+                            'داعية، وخطيب، وكاتب فلسطيني (ولد في مخيم جباليا، 1989م)، مقيم في تركيا، نشأ وترعرع في قطاع غزة، يعتبر واحداً من مشاهير اليوتيوب في الوطن العربي؛ إذ يتابعه أكثر من 3.93 مليون متابع حتى تاريخ 1 آب 2021، وأكثر من 5.5 مليون متابع على الفيسبوك، ونحو 196 ألف على تويتر',
+                        mainImage: 'images/Alhasanat.jpg',
                         userImage: 'images/hasanat.jpg',
                       ),
-                      const Divider(thickness: 1,color: Colors.grey,),
-                      userArea(
-                        userName: 'Maher Almaikulai',
-                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: 'images/moaqle2.jpg',
-                        userImage: 'images/moaqle.jpg', ),
-                      const Divider(thickness: 1,color: Colors.grey,),
-
-                      userArea(
-                        userName: 'Mashary Alafasy',
-                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: 'images/afasy2.jpg',
-                        userImage: 'images/afasy.jpg',
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      const Divider(thickness: 1,color: Colors.grey,),
-                      userArea(
-                          userImage: 'images/fares.jpg',
-                          aboutUser: 'Smart System Engineering',
-                          mainImage: '',
-                          userName: 'Fares Abbad'
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
                       ),
-                      const Divider(thickness: 1,color: Colors.grey,),
+                      userArea(
+                        userName: 'محمد النحيت',
+                        aboutUser:
+                            'علم اجتماع | صانع محتوى اجتماعي | مقدم برامج | رئيس تنفيذي لشركة نبذة للإنتاج',
+                        mainImage: 'images/mohammedNahet.jpg',
+                        userImage: 'images/mohammedNahet.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                        userName: 'معتز مشعل',
+                        aboutUser:
+                            'معتز مشعل هو استراتيجى تطوير أعمال ومهارات حياتية وصاحب سلسلة من برامج وفعاليات تطوير الذات التي تُعقد في العديد من البلدان العربية وتدرب آلاف من الناس.ولد معتز في عام 1983 لأسرة فلسطينية تنحدر من مدينة رام الله',
+                        mainImage: 'images/motaz.jpg',
+                        userImage: 'images/motaz.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                          userImage: 'images/ibrahem.jpeg',
+                          aboutUser:
+                              'إبراهيم عادل شاب مصري مكافح يشغل حتى الآن منصب رئيس قسم الصوتيات بإحدى أشهر مدارس تعلم اللغة الإنجليزية بمدينة هونج كونج التابعة لجمهورية الصين الشعبية.يتحدث الأستاذ إبراهيم عادل أكثر من لغة عالمية مثل اللغة الصينية، اللغة الكانتونية، وهي لغة مشتقة من اللغة الصينية، وطبعا اللغة الإنجليزية، واللغة العربية الأساسية.',
+                          mainImage: 'images/ibrahem1.png',
+                          userName: ' ابراهيم عادل'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
                     ],
                   ),
                 ),
@@ -112,7 +579,8 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
       ),
     );
   }
-   userArea({userName, userImage, aboutUser, mainImage}) {
+
+  userArea({userName, userImage, aboutUser, mainImage}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 5),
       child: Column(
@@ -144,7 +612,8 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                             color: Colors.grey[900],
                             fontSize: 16,
                             fontWeight: FontWeight.normal,
-                            letterSpacing: .5),
+                            letterSpacing: .5,
+                            fontFamily: 'NotoNaskhArabic'),
                       ),
                       const SizedBox(
                         height: 3,
@@ -174,7 +643,8 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                   fontSize: 15,
                   color: Colors.grey[800],
                   height: 1,
-                  letterSpacing: 1),
+                  letterSpacing: 1,
+                  fontFamily: 'NotoNaskhArabic'),
             ),
           ),
           const SizedBox(
@@ -182,94 +652,15 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
           ),
           mainImage != ''
               ? Container(
-            height: 200,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    image: AssetImage(mainImage), fit: BoxFit.contain)),
-          )
+                  height: 200,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                          image: AssetImage(mainImage), fit: BoxFit.contain)),
+                )
               : Container(),
-          const SizedBox(
-            height: 0,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15,left: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                facebookButton(),
-                instagramButton(),
-                twitterButton(),
-                youtubeButton(),
-
-              ],
-            ),
-          ),
         ],
       ),
-    );
-  }
-   facebookButton() {
-    return Center(
-      child: Column(
-        children: [
-          IconButton(
-              onPressed: () {
-              },
-              icon: const Icon(Icons.facebook),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text('Facebook',style: TextStyle(fontSize: 10),)
-        ],
-      ),
-    );
-  }
-   instagramButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.instagram),
-              color: Colors.pink.shade400,
-              iconSize: 28),
-          // SizedBox(height: 3,),
-          const Text('instagram',style: TextStyle(fontSize: 10),),
-        ],
-      ),
-    );
-  }
-   twitterButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.twitter),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text('Twitter',style: TextStyle(fontSize: 10),)
-        ],
-      ),
-
-    );
-  }
-   youtubeButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.youtube,color: Colors.red,),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text('Youtube',style: TextStyle(fontSize: 10),)
-        ],
-      ),
-
     );
   }
 }

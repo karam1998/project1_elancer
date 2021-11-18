@@ -14,9 +14,9 @@ class OutBoardingScreen extends StatefulWidget {
 
 class _OutBoardingScreenState extends State<OutBoardingScreen> {
   List<OnboardingModel> screen = <OnboardingModel>[
-    OnboardingModel(imag: 'images/learn.png', text: 'text'),
-    OnboardingModel(imag: 'images/readingbook.png', text: 'text'),
-    OnboardingModel(imag: 'images/manthumbs.png', text: 'text'),
+    OnboardingModel(imag: 'images/learn.png', text: 'اعثر على شخصيتك المفضله ...'),
+    OnboardingModel(imag: 'images/readingbook.png', text: 'على مختلف وسائل التواصل الاجتماعيه..'),
+    OnboardingModel(imag: 'images/manthumbs.png', text: 'فيسبوك!.. انستغرام!.. تويتر!.. يوتيوب! جميعهم في مكان واحد'),
   ];
   late PageController _pageController;
   int _currentPage = 0;
@@ -49,8 +49,8 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                 onPressed: () =>
                     Navigator.pushReplacementNamed(context, '/login_screen'),
                 child: const Text(
-                  'START',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  'البدء',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
                 ),
               ),
               child: TextButton(
@@ -59,7 +59,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                   duration: const Duration(seconds: 1),
                   curve: Curves.easeInOut,
                 ),
-                child: const Text('SKIP'),
+                child: const Text('تخطى',style: TextStyle(fontFamily: 'NotoNaskhArabic'),),
               ),
             ),
           ),
@@ -80,14 +80,14 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
               },
               itemBuilder: (_, index) {
                 return Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Image.asset(screen[index].imag),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -144,7 +144,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                             onPressed: () => Navigator.pushReplacementNamed(
                                 context, '/login_screen'),
                             child: const Text(
-                              'START',
+                              'بداية',
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,

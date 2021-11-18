@@ -15,11 +15,12 @@ class _MuslemScreenState extends State<MuslemScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+
         title: const Text(' الدعاه',style: TextStyle(color: Colors.blue,fontSize: 28,fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(onPressed: (){
+        leading:IconButton(onPressed: (){
           Navigator.pushReplacementNamed(context, '/main_screen');
         }, icon: const Icon(Icons.arrow_back_ios,color: Colors.blue,),padding: const EdgeInsets.only(left: 7),),
 
@@ -32,7 +33,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(18),
                   child: Column(
                     children: [
                       // const Text(
@@ -48,33 +49,493 @@ class _MuslemScreenState extends State<MuslemScreen> {
                       ),
 
                       userArea(
-                          userName: 'Abdulrahman Alsudais',
-                          aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                          mainImage: '',
-                          userImage: 'images/sodase.jpg',
+                          userName: 'أ.د.أحمد عيسى المعصراوي',
+                          aboutUser: 'الشيخ أحمد عيسى حسن المعصراوي، شيخ عموم المقارئ المصرية السابق.',
+                          mainImage: 'images/ahmedMasarawe.jpg',
+                          userImage: 'images/ahmedMasarawe.jpg',
                           ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(thickness: 1,color: Colors.grey,),
+                      userArea(
+                        userName: 'محمد راتب النابلسي',
+                        aboutUser:'داعية سوري، معاصر، له دروس ومحاضرات في الإعجاز العلمي والتفسير، والمنهج العلمي والمعرفة، اشتهر بسلسلته عن أسماء الله الحسنى، وعن الشمائل النبوية. وهو رئيس هيئة الإعجاز القرآني',
+                        mainImage: 'images/Ratib_Al-Nabulsi.jpg',
+                        userImage: 'images/Ratib_Al-Nabulsi.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(thickness: 1,color: Colors.grey,),
 
                       userArea(
-                          userName: 'Maher Almaikulai',
-                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: 'images/moaqle2.jpg',
-                          userImage: 'images/moaqle.jpg', ),
+                          userName: 'محمد بن إبراهيم العوضي',
+                        aboutUser:'داعية ومفكر إسلامي (ولد في 1959، الكويت) نشط في مجال تعزيز الأخلاق ونشر الدين الإسلامي وخصوصاً لدى الشباب.',
+                        mainImage: 'images/Mohammed_Al-Awadi.jpg',
+                          userImage: 'images/Mohammed_Al-Awadi.jpg', ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
 
                       const Divider(thickness: 1,color: Colors.grey,),
 
                       userArea(
-                          userName: 'Mashary Alafasy',
-                        aboutUser: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s' ,
-                        mainImage: 'images/afasy2.jpg',
-                          userImage: 'images/afasy.jpg',
+                          userName: 'عائض بن عبد الله القرني',
+                        aboutUser: ' كاتب وشاعر وداعية إسلامي سعودي. له الكثير من الكتب والخطب والمحاضرات الصوتية والمرئية من دروس ومحاضرات وأمسيات شعرية وندوات أدبية.',
+                        mainImage: 'images/Alqarane.png',
+                          userImage: 'images/Alqarane.png',
                          ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(thickness: 1,color: Colors.grey,),
                       userArea(
-                        userImage: 'images/fares.jpg',
-                        aboutUser: 'Smart System Engineering',
-                        mainImage: '',
-                        userName: 'Fares Abbad'
+                        userImage: 'images/abdalaRoshdy.jpg',
+                        aboutUser: 'إمام وخطيب بوزارة الأوقاف المصرية في مسجد السيدة نفيسة ومهتم بمقارنة الأديان والمذاهب ومقدم برامج تلفزيونية حيث قام بتقديم برنامج "القول الفصل" ',
+                        mainImage: 'images/abdalaRoshdy.jpg',
+                        userName: 'عبدالله رشدي'
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(thickness: 1,color: Colors.grey,),
+                      userArea(
+                          userImage: 'images/omar_abdelkafi.jpg',
+                          aboutUser: ' داعية إسلامي. وخريج كلية الزراعة اهتم بالإعجاز العلمي في القرآن واللغة العربية وأحاديث الدار الآخرة. ',
+                          mainImage: 'images/omar_abdelkafi.jpg',
+                          userName: 'عمر عبد الكافي'
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(thickness: 1,color: Colors.grey,),
+                      userArea(
+                          userImage: 'images/Ahmed_el_Tayeb.jpg',
+                          aboutUser: ' الإمام الأكبر شيخ الجامع الأزهر (الإمام الثامن والأربعون ) منذ 19 مارس 2010. والرئيس السابق لجامعة الأزهر، ورئيس مجلس حكماء المسلمين، وهو أستاذ في العقيدة الإسلامية',
+                          mainImage: 'images/Ahmed_el_Tayeb.jpg',
+                          userName: 'أحمد الطيب'
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(thickness: 1,color: Colors.grey,),
+                      userArea(
+                          userImage: 'images/Dr_Zakir_Naik.jpg',
+                          aboutUser:' هو داعية إسلامي وواعظ إسلامي هندي ومؤسس ورئيس مؤسسة البحوث الإسلامية (IRF). وهو أيضًا مؤسس قناة السلام. وقد تم اعتباره "سلطة في مجال مقارنة الأديان"،',
+                          mainImage: 'images/Dr_Zakir_Naik.jpg',
+                          userName: 'ذاكر عبد الكريم نايك'
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const Divider(thickness: 1,color: Colors.grey,),
 
@@ -168,87 +629,9 @@ class _MuslemScreenState extends State<MuslemScreen> {
           const SizedBox(
             height: 0,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15,left: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                facebookButton(),
-                instagramButton(),
-                twitterButton(),
-                youtubeButton(),
 
-              ],
-            ),
-          )
         ],
       ),
-    );
-  }
-
-  Widget facebookButton() {
-    return Center(
-      child: Column(
-        children: [
-          IconButton(
-              onPressed: () {
-              },
-              icon: const Icon(Icons.facebook),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text('Facebook',style: TextStyle(fontSize: 10),)
-        ],
-      ),
-    );
-  }
-
-  Widget instagramButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.instagram),
-              color: Colors.pink.shade400,
-              iconSize: 28),
-          // SizedBox(height: 3,),
-          const Text('instagram',style: TextStyle(fontSize: 10),),
-        ],
-      ),
-    );
-  }
-
-  Widget twitterButton() {
-    return Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(FontAwesomeIcons.twitter),
-                color: Colors.blue,
-                iconSize: 28),
-            const Text('Twitter',style: TextStyle(fontSize: 10),)
-          ],
-        ),
-
-    );
-  }
-  Widget youtubeButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.youtube,color: Colors.red,),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text('Youtube',style: TextStyle(fontSize: 10),)
-        ],
-      ),
-
     );
   }
 }

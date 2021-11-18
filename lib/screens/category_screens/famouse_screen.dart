@@ -61,6 +61,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                               'باحث عن السلام الداخلي في وسط ضعفي البشري',
                           mainImage: 'images/shqare1.png',
                           userName: 'Ahmad AlShugairi'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -71,6 +125,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                           aboutUser:
                               'لمستشار الأسري والتربوي ومستشار صحة نفسية',
                           mainImage: 'images/hala1.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -81,6 +189,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                           aboutUser:
                               'لمستشار الأسري والتربوي ومستشار صحة نفسية',
                           mainImage: 'images/yaser2.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -91,6 +253,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                           aboutUser:
                               ' باحث وكاتب، وداعية إسلامي، ومؤرخ، وإعلامي، ومدرب في الإدارة والقيادة.',
                           mainImage: 'images/tareq.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -102,6 +318,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                         mainImage: '',
                         userImage: 'images/hasanat.jpg',
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -112,6 +382,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
                         mainImage: 'images/moaqle2.jpg',
                         userImage: 'images/moaqle.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const Divider(
                         thickness: 1,
@@ -125,6 +449,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                         mainImage: 'images/afasy2.jpg',
                         userImage: 'images/afasy.jpg',
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -134,6 +512,60 @@ class _FamouseScreenState extends State<FamouseScreen> {
                           aboutUser: 'Smart System Engineering',
                           mainImage: '',
                           userName: 'Fares Abbad'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -148,7 +580,6 @@ class _FamouseScreenState extends State<FamouseScreen> {
       ),
     );
   }
-
   userArea({userName, userImage, aboutUser, mainImage}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 5),
@@ -229,97 +660,6 @@ class _FamouseScreenState extends State<FamouseScreen> {
           const SizedBox(
             height: 0,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15, left: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                facebookButton(),
-                instagramButton(),
-                twitterButton(),
-                youtubeButton(),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  facebookButton() {
-    return Center(
-      child: Column(
-        children: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.facebook),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text(
-            'Facebook',
-            style: TextStyle(fontSize: 10),
-          )
-        ],
-      ),
-    );
-  }
-
-  instagramButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.instagram),
-              color: Colors.pink.shade400,
-              iconSize: 28),
-          // SizedBox(height: 3,),
-          const Text(
-            'instagram',
-            style: TextStyle(fontSize: 10),
-          ),
-        ],
-      ),
-    );
-  }
-
-  twitterButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.twitter),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text(
-            'Twitter',
-            style: TextStyle(fontSize: 10),
-          )
-        ],
-      ),
-    );
-  }
-
-  youtubeButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                FontAwesomeIcons.youtube,
-                color: Colors.red,
-              ),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text(
-            'Youtube',
-            style: TextStyle(fontSize: 10),
-          )
         ],
       ),
     );

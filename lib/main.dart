@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/main_screen',
+      initialRoute: '/reciters_screen',
       routes: {
         '/launch_screen': (context) => const LaunchScreen(),
         '/out_boarding_screen': (context) => const OutBoardingScreen(),
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: const Locale('en'),
+      locale: const Locale('ar'),
       supportedLocales: const [
         Locale('ar', ''),
         Locale('en', ''),

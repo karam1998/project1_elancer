@@ -18,7 +18,12 @@ class _RecitersScreenState extends State<RecitersScreen> {
         title: const Text(
           ' اشهر قراء القرآن الكريم',
           style: TextStyle(
-              color: Colors.blue, fontSize: 28, fontWeight: FontWeight.bold),
+            color: Colors.blue,
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'NotoNaskhArabic',
+            letterSpacing: 1,
+          ),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -57,11 +62,52 @@ class _RecitersScreenState extends State<RecitersScreen> {
                       ),
 
                       userArea(
-                        userName: 'Abdulrahman Alsudais',
+                        userName: 'عبدالرحمن السديس',
                         aboutUser:
-                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-                        mainImage: '',
+                            'السديس هو الرئيس العام لشؤون المسجد الحرام والمسجد النبوي وإمام وخطيب بالحرم المكي الشريف. ولد في البكيرية بمنطقة القصيم عام 1379 هـ، وهو من أشهر مرتلي القرآن الكريم في العالم، وتمكن من حفظ القرآن الكريم ولم يكن يبلغ من العمر اثني عشر عامًا.',
+                        mainImage: 'images/sodase.jpg',
                         userImage: 'images/sodase.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const Divider(
                         thickness: 1,
@@ -69,44 +115,222 @@ class _RecitersScreenState extends State<RecitersScreen> {
                       ),
 
                       userArea(
-                        userName: 'Maher Almaikulai',
+                        userName: 'ماهر المعيقلي',
                         aboutUser:
-                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+                            'ماهر بن حمد بن معيقل المعيقلي البلوي … و قد  ولد الشيخ ماهر المعيقلي في السابع من يناير سنة 1969 ميلاديا … وقد ولد ماهر المعيقلي في المدينة المنورة في المملكة العربية السعودية .لقد حفظ  الشيخ ماهر المعيقلي القرآن الكريم كاملا و هو من أشهر القراء في العالم الإسلامي يتميز الشيخ ماهر المعيقلي بصوت جميل و رائع و اهتم بالقرآن فدرَس قواعده وأحكامه ، و أَحبَّ قراءته كما ينبغي، فصدحت حنجرته بما تيسر من آياته ترتيلا و تجويدا',
                         mainImage: 'images/moaqle2.jpg',
                         userImage: 'images/moaqle.jpg',
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
                       ),
 
                       userArea(
-                        userName: 'Mashary Alafasy',
+                        userName: 'مشاري العفاسي',
                         aboutUser:
-                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+                            ' إمام المسجد الكبير بدولة الكويت وخطيب في وزارة الأوقاف والشؤون الإسلامية بدولة الكويت، صاحب أول قناة إسلامية كويتية قناة العفاسي الفضائية. وقارئ القرآن الكريم ومنشد ديني كويتي. له العديد من الإصدارات التي انتشرت في الوطن العربي والإسلامي والعالم.',
                         mainImage: 'images/afasy2.jpg',
                         userImage: 'images/afasy.jpg',
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
                       ),
                       userArea(
-                        userImage: 'images/islam.jpg',
-                        userName: 'Islam Sobhi',
+                        userImage: 'images/Yasser_Al-Dosari.png',
+                        userName: 'ياسر الدوسري',
                         aboutUser:
-                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-                        mainImage: '',
+                            'أحد قراء القرآن الكريم في المملكة العربية السعودية ومن أئمة المسجد الحرام اعتباراً من صفر 1441 للهجرة،  وهو مؤسس مجموعة آيات للإعلام القرآني مع الشيخ ناصر القطامي. وهو إمام في المسجد الحرام وتم تعيينه في المسجد الحرام يوم السبت 1441/2/13هـ',
+                        mainImage: 'images/Yasser_Al-Dosari.png',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
                       ),
                       userArea(
-                          userImage: 'images/fares.jpg',
-                          aboutUser: 'Smart System Engineering',
-                          mainImage: '',
-                          userName: 'Fares Abbad'),
+                          userImage: 'images/naser.jpg',
+                          aboutUser:
+                              'ارئ من قراء القرآن الكريم في المملكة العربية السعودية، وإمام وخطيب جامع عبد الله بن ناصر المهيني بالرياض. ولد في السعودية عام 1980 م 1400 هـ. ويعد من أشهر قراء منطقة الخليج والوطن العربي',
+                          mainImage: 'images/naser.jpg',
+                          userName: 'ناصر القطامي'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -202,40 +426,11 @@ class _RecitersScreenState extends State<RecitersScreen> {
           const SizedBox(
             height: 0,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15, left: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                facebookButton(),
-                instagramButton(),
-                twitterButton(),
-                youtubeButton(),
-              ],
-            ),
-          )
         ],
       ),
     );
   }
 
-  Widget facebookButton() {
-    return Center(
-      child: Column(
-        children: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.facebook),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text(
-            'Facebook',
-            style: TextStyle(fontSize: 10),
-          )
-        ],
-      ),
-    );
-  }
 
   Widget instagramButton() {
     return Center(
@@ -257,44 +452,5 @@ class _RecitersScreenState extends State<RecitersScreen> {
     );
   }
 
-  Widget twitterButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.twitter),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text(
-            'Twitter',
-            style: TextStyle(fontSize: 10),
-          )
-        ],
-      ),
-    );
-  }
 
-  Widget youtubeButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                FontAwesomeIcons.youtube,
-                color: Colors.red,
-              ),
-              color: Colors.blue,
-              iconSize: 28),
-          const Text(
-            'Youtube',
-            style: TextStyle(fontSize: 10),
-          )
-        ],
-      ),
-    );
-  }
 }

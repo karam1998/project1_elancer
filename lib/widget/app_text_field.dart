@@ -24,7 +24,8 @@ class AppTextField extends StatelessWidget {
       keyboardType: keyboardType,
       decoration: InputDecoration(
           hintText: hint,
-          hintStyle: const TextStyle(color: Colors.blueGrey),
+          hintStyle: const TextStyle(
+              color: Colors.blueGrey, fontFamily: 'NotoNaskhArabic'),
           prefixIcon: Icon(
             prefixIcon,
             color: Colors.blueAccent,

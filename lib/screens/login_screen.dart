@@ -120,13 +120,13 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                               width: double.infinity,
                               alignment: Alignment.center,
                               child: Text(
-                                'Welcome back..',
+                                'مرحبا بعودتك..',
                                 style: TextStyle(
                                     color: Colors.blue.shade900,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 30,
                                     wordSpacing: 1,
-                                    fontFamily: 'SourceSansPro'),
+                                    fontFamily: 'NotoNaskhArabic'),
                               ),
                             ),
                             const SizedBox(
@@ -135,23 +135,24 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                             Container(
                               alignment: Alignment.center,
                               child: const Text(
-                                'Enter your email & password',
+                                'أدخل البريد الإلكتروني وكلمة المرور الخاصة بك',
                                 style: TextStyle(
                                   color: Colors.blueGrey,
                                   fontSize: 18,
                                   wordSpacing: 1,
+                                  fontFamily: 'NotoNaskhArabic',
                                 ),
                               ),
                             ),
                             const SizedBox(height: 25),
                             AppTextField(
-                              hint: 'Email',
+                              hint: 'البريد الإلكتروني',
                               controller: _emailTextController,
                               prefixIcon: Icons.email,
                             ),
                             const SizedBox(height: 20),
                             AppTextField(
-                              hint: 'Password',
+                              hint: 'كلمه المرور',
                               controller: _passwordTextController,
                               prefixIcon: Icons.lock,
                               obscureText: true,
@@ -160,8 +161,8 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                             ElevatedButton(
                               onPressed: () => performLogin(),
                               child: const Text(
-                                'LOGIN',
-                                style: TextStyle(fontSize: 22),
+                                'تسجيل الدخول',
+                                style: TextStyle(fontSize: 22,fontFamily: 'NotoNaskhArabic'),
                               ),
                               style: ElevatedButton.styleFrom(
                                 elevation: 10,
@@ -173,27 +174,29 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                                 ),
                               ),
                             ),
-                            const SizedBox(height: 25),
+                            const SizedBox(height: 15),
                             const Text(
-                              '- OR -',
+                              '- أو -',
                               style: TextStyle(
                                   color: Colors.blue,
                                   fontWeight: FontWeight.normal,
+                                  fontFamily: 'NotoNaskhArabic',
                                   fontSize: 20),
                             ),
                             const SizedBox(
-                              height: 20,
+                              height: 10,
                             ),
                             const Text(
-                              ' Sign In With ',
+                              ' قم بتسجيل الدخول باستخدام ',
                               style: TextStyle(
                                 fontSize: 18,
                                 color: Colors.blueAccent,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'NotoNaskhArabic',
                               ),
                             ),
                             const SizedBox(
-                              height: 40,
+                              height: 10,
                             ),
                             Padding(
                               padding: const EdgeInsets.all(10),
@@ -262,28 +265,10 @@ class _LoginScreenState extends State<LoginScreen> with Helpers {
                                           image: DecorationImage(
                                             image:
                                                 AssetImage('images/google.png'),
-                                          )),
-                                    ),
 
-                                    // RichText(
-                                    //   textAlign: TextAlign.center,
-                                    //   text: TextSpan(
-                                    //     text: 'Don\'t have an account?',
-                                    //     style: const TextStyle(
-                                    //       color: Colors.black,
-                                    //     ),
-                                    //     children: [
-                                    //       const TextSpan(text: ' '),
-                                    //       TextSpan(
-                                    //         recognizer: _tapGestureRecognizer,
-                                    //         text: 'Create Now!',
-                                    //         style: const TextStyle(
-                                    //           color: Colors.blue,
-                                    //         ),
-                                    //       )
-                                    //     ],
-                                    //   ),
-                                    // ),
+                                          ),
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),

@@ -29,8 +29,8 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 8,
                 ),
                 Text(
-                  "Account",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  "الحساب",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
                 ),
               ],
             ),
@@ -41,11 +41,11 @@ class _SettingScreenState extends State<SettingScreen> {
             const SizedBox(
               height: 10,
             ),
-            buildAccountOptionRow(context, "Change password"),
-            buildAccountOptionRow(context, "Content settings"),
-            buildAccountOptionRow(context, "Social"),
-            buildAccountOptionRow(context, "Language"),
-            buildAccountOptionRow(context, "Privacy and security"),
+            buildAccountOptionRow(context, "تغيير كلمة المرور"),
+            buildAccountOptionRow(context, "إعدادات المحتوى"),
+            buildAccountOptionRow(context, "اجتماعي"),
+            buildAccountOptionRow(context, "اللغة"),
+            buildAccountOptionRow(context, "الخصوصية والأمان"),
             const SizedBox(
               height: 40,
             ),
@@ -59,8 +59,8 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: 8,
                 ),
                 Text(
-                  "Notifications",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  "الإشعارات",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
                 ),
               ],
             ),
@@ -71,8 +71,7 @@ class _SettingScreenState extends State<SettingScreen> {
             const SizedBox(
               height: 10,
             ),
-            buildNotificationOptionRow("Account activity", true),
-            buildNotificationOptionRow("Opportunity", false),
+            buildNotificationOptionRow("نشاط الحساب", true),
             const SizedBox(
               height: 50,
             ),
@@ -82,9 +81,9 @@ class _SettingScreenState extends State<SettingScreen> {
                   Navigator.pushReplacementNamed(context, '/login_screen');
                 },
                 // onPressed: () {},
-                child: const Text("SIGN OUT",
+                child: const Text("تسجيل الخروج",
                     style: TextStyle(
-                        fontSize: 16, letterSpacing: 2.2, color: Colors.black)),
+                        fontSize: 16, letterSpacing: 2.2, color: Colors.black,fontFamily: 'NotoNaskhArabic')),
               ),
             )
           ],
@@ -134,7 +133,7 @@ GestureDetector buildAccountOptionRow(BuildContext context, String title) {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: const Text("Close")),
+                    child: const Text("إغلاق",style: TextStyle(fontFamily: 'NotoNaskhArabic'),)),
               ],
             );
           });

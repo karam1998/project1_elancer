@@ -14,9 +14,9 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<BnScreen> _bnScreens = <BnScreen>[
-    const BnScreen(title: 'Home', widget: HomeScreen()),
-    const BnScreen(title: 'Favorites', widget: FavoriteScreen()),
-    const BnScreen(title: 'Settings', widget: SettingScreen()),
+    const BnScreen(title: 'الصفحة الرئيسية', widget: HomeScreen()),
+    const BnScreen(title: 'المفضلة', widget: FavoriteScreen()),
+    const BnScreen(title: 'الإعدادات', widget: SettingScreen()),
   ];
 
   @override
@@ -24,7 +24,10 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(_bnScreens[_currentIndex].title),
+        title: Text(
+          _bnScreens[_currentIndex].title,
+          style: const TextStyle(fontFamily: 'NotoNaskhArabic'),
+        ),
         centerTitle: true,
       ),
       body: _bnScreens[_currentIndex].widget,
@@ -62,19 +65,19 @@ class _MainScreenState extends State<MainScreen> {
             // backgroundColor: Colors.blue,
             icon: Icon(Icons.home_outlined),
             activeIcon: Icon(Icons.home),
-            label: 'Home',
+            label: 'الرئيسية',
           ),
           BottomNavigationBarItem(
             // backgroundColor: Colors.green,
             icon: Icon(Icons.favorite_border_outlined),
             activeIcon: Icon(Icons.favorite),
-            label: 'Favorite',
+            label: 'المفضلة',
           ),
           BottomNavigationBarItem(
             // backgroundColor: Colors.blue,
             icon: Icon(Icons.settings_outlined),
             activeIcon: Icon(Icons.settings),
-            label: 'Settings',
+            label: 'الإعدادات',
           )
         ],
       ),

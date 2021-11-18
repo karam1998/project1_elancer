@@ -123,14 +123,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text(
-                          'Categories',
+                          'الاقسام',
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
                         ),
                         TextButton(
                           onPressed: () {},
                           child: const Text(
-                            'View all',
+                            'عرض الكل',style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
                           ),
                         ),
                       ],
@@ -176,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               const Positioned(
                                 bottom: 2,
                                 child: Text(
-                                  'preacher',
+                                  'وُعَّاظ',
                                   style: TextStyle(
                                       fontSize: 40,
                                       letterSpacing: 2,
@@ -185,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       backgroundColor: Colors.blueAccent,
 
                                       // backgroundColor: Colors.blue.shade400,
-                                      fontFamily: 'SourceSansPro'),
+                                      fontFamily: 'NotoNaskhArabic'),
                                 ),
                               ),
                             ],
@@ -222,7 +223,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               const Positioned(
                                 bottom: 2,
                                 child: Text(
-                                  'Reciters',
+                                  'قُرّاء',
                                   style: TextStyle(
                                       fontSize: 40,
                                       letterSpacing: 2,
@@ -231,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       backgroundColor: Colors.blueAccent,
 
                                       // backgroundColor: Colors.blue.shade400,
-                                      fontFamily: 'SourceSansPro'),
+                                      fontFamily: 'NotoNaskhArabic'),
                                 ),
                               ),
                             ],
@@ -268,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               const Positioned(
                                 bottom: 2,
                                 child: Text(
-                                  'Influencers',
+                                  'المؤثرون',
                                   style: TextStyle(
                                       fontSize: 40,
                                       letterSpacing: 2,
@@ -277,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       backgroundColor: Colors.blueAccent,
 
                                       // backgroundColor: Colors.blue.shade400,
-                                      fontFamily: 'SourceSansPro'),
+                                      fontFamily: 'NotoNaskhArabic'),
                                 ),
                               ),
                             ],
@@ -314,14 +315,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               const Positioned(
                                 bottom: 2,
                                 child: Text(
-                                  'Famous',
+                                  'مشاهير',
                                   style: TextStyle(
                                       fontSize: 40,
                                       fontWeight: FontWeight.normal,
                                       letterSpacing: 3,
                                       color: Colors.white,
                                       backgroundColor: Colors.blueAccent,
-                                      fontFamily: 'SourceSansPro'),
+                                      fontFamily: 'NotoNaskhArabic'),
                                 ),
                               ),
                             ],
