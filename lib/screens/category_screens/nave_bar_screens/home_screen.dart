@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:project1/screens/category_screens/famouse_screen.dart';
 import 'package:project1/screens/category_screens/influencers_screen.dart';
 import 'package:project1/screens/category_screens/muslems_screen.dart';
 import 'package:project1/screens/category_screens/reciters_screen.dart';
@@ -125,13 +126,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         const Text(
                           'الاقسام',
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'NotoNaskhArabic'),
                         ),
                         TextButton(
                           onPressed: () {},
                           child: const Text(
-                            'عرض الكل',style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
+                            'عرض الكل',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'NotoNaskhArabic'),
                           ),
                         ),
                       ],
@@ -269,7 +275,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               const Positioned(
                                 bottom: 2,
                                 child: Text(
-                                  'المؤثرون',
+                                  'مؤثرون',
                                   style: TextStyle(
                                       fontSize: 40,
                                       letterSpacing: 2,
@@ -289,7 +295,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onTap: () {
                           Navigator.push(context, MaterialPageRoute(
                             builder: (context) {
-                              return const InfluencersScreen();
+                              return const FamouseScreen();
                             },
                           ));
                         },
@@ -315,9 +321,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               const Positioned(
                                 bottom: 2,
                                 child: Text(
-                                  'مشاهير',
+                                  'اصحاب الروايه',
                                   style: TextStyle(
-                                      fontSize: 40,
+                                      fontSize: 30,
                                       fontWeight: FontWeight.normal,
                                       letterSpacing: 3,
                                       color: Colors.white,

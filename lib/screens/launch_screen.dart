@@ -14,7 +14,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/login_screen');
+      Navigator.pushReplacementNamed(context, '/out_boarding_screen');
     });
   }
 

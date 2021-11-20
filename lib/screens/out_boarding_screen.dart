@@ -88,8 +88,9 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                     children: [
                       Image.asset(screen[index].imag),
                       const SizedBox(
-                        height: 10,
+                        // height: 10,
                       ),
+                      Text(screen[index].text,style: const TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -121,7 +122,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

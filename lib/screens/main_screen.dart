@@ -14,7 +14,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<BnScreen> _bnScreens = <BnScreen>[
-    const BnScreen(title: 'الصفحة الرئيسية', widget: HomeScreen()),
+    const BnScreen(title: ' الرئيسية', widget: HomeScreen()),
     const BnScreen(title: 'المفضلة', widget: FavoriteScreen()),
     const BnScreen(title: 'الإعدادات', widget: SettingScreen()),
   ];
@@ -22,11 +22,16 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0,
         title: Text(
           _bnScreens[_currentIndex].title,
-          style: const TextStyle(fontFamily: 'NotoNaskhArabic'),
+          style: const TextStyle(
+            fontFamily: 'NotoNaskhArabic',
+            color: Colors.white,
+          ),
         ),
         centerTitle: true,
       ),

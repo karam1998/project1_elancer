@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InfluencersScreen extends StatefulWidget {
   const InfluencersScreen({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
         elevation: 0,
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/main_screen');
+            Navigator.pop(context);
           },
           icon: const Icon(
             Icons.arrow_back_ios,
@@ -70,7 +71,10 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/AhmadAlShugairi")
+                                          },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
                                       iconSize: 28),
@@ -81,8 +85,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/shugairi")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
                                       color: Colors.blue,
                                       iconSize: 28),
                                 ],
@@ -92,8 +100,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/channel/UC_Ds7nedV3NqYf0zhpYti4A")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
                                 ],
@@ -104,8 +116,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/ahmadalshugairi/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
@@ -133,7 +149,10 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/Halasamirofficial/")
+                                          },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
                                       iconSize: 28),
@@ -144,8 +163,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/hala_samir7")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
                                       color: Colors.blue,
                                       iconSize: 28),
                                 ],
@@ -155,8 +178,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/c/halasamir")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
                                 ],
@@ -167,8 +194,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/halasamirofficial/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
@@ -197,7 +228,10 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/yassermamdouh4/")
+                                          },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
                                       iconSize: 28),
@@ -208,8 +242,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/yasseralmamdouh")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
                                       color: Colors.blue,
                                       iconSize: 28),
                                 ],
@@ -219,8 +257,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/c/YasserMamdouh")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
                                 ],
@@ -231,8 +273,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/yassermamdouhofficial/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
@@ -261,7 +307,10 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/Dr.TareqAlSuwaidan")
+                                          },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
                                       iconSize: 28),
@@ -272,8 +321,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/TareqAlSuwaidan")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
                                       color: Colors.blue,
                                       iconSize: 28),
                                 ],
@@ -283,8 +336,76 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/c/DrAlSuwaidan")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+
+                      userArea(
+                        userName: 'معتز مشعل',
+                        aboutUser:
+                            'معتز مشعل هو استراتيجى تطوير أعمال ومهارات حياتية وصاحب سلسلة من برامج وفعاليات تطوير الذات التي تُعقد في العديد من البلدان العربية وتدرب آلاف من الناس.ولد معتز في عام 1983 لأسرة فلسطينية تنحدر من مدينة رام الله',
+                        mainImage: 'images/motaz.jpg',
+                        userImage: 'images/motaz.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/MoatazMashalPage/?fref=ts")
+                                          },
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/moatazmashal?lang=en")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/c/MoatazMashal")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
                                 ],
@@ -295,8 +416,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/moataz_mashal/?hl=en")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
@@ -326,7 +451,10 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/abohamzaalhasanat")
+                                          },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
                                       iconSize: 28),
@@ -337,8 +465,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/abohamzahasanat")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
                                       color: Colors.blue,
                                       iconSize: 28),
                                 ],
@@ -348,8 +480,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/channel/UCTsAN8CeCY5zJ_SA8kekTXg")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
                                 ],
@@ -360,8 +496,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/mahmoudalhasanat/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
@@ -391,7 +531,10 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/people/%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D9%86%D8%AD%D9%8A%D8%AA-Mohammed-Alnhet/100044285923503/")
+                                          },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
                                       iconSize: 28),
@@ -402,8 +545,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/M_Alnhet")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
                                       color: Colors.blue,
                                       iconSize: 28),
                                 ],
@@ -413,8 +560,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/c/alnhet")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
                                 ],
@@ -425,73 +576,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
-                                      color: Colors.pink.shade400,
-                                      iconSize: 28),
-                                  // SizedBox(height: 3,),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const Divider(
-                        thickness: 1,
-                        color: Colors.grey,
-                      ),
-                      userArea(
-                        userName: 'معتز مشعل',
-                        aboutUser:
-                            'معتز مشعل هو استراتيجى تطوير أعمال ومهارات حياتية وصاحب سلسلة من برامج وفعاليات تطوير الذات التي تُعقد في العديد من البلدان العربية وتدرب آلاف من الناس.ولد معتز في عام 1983 لأسرة فلسطينية تنحدر من مدينة رام الله',
-                        mainImage: 'images/motaz.jpg',
-                        userImage: 'images/motaz.jpg',
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 15, left: 15),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Center(
-                              child: Column(
-                                children: [
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(Icons.facebook),
-                                      color: Colors.blue,
-                                      iconSize: 28),
-                                ],
-                              ),
-                            ),
-                            Center(
-                              child: Column(
-                                children: [
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
-                                      color: Colors.blue,
-                                      iconSize: 28),
-                                ],
-                              ),
-                            ),
-                            Center(
-                              child: Column(
-                                children: [
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
-                                      color: Colors.redAccent,
-                                      iconSize: 28),
-                                ],
-                              ),
-                            ),
-                            Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/m_alnhet/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
@@ -520,7 +610,10 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/zAmericanEnglish/")
+                                          },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
                                       iconSize: 28),
@@ -531,8 +624,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.twitter),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/ZAmericanEnglis")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
                                       color: Colors.blue,
                                       iconSize: 28),
                                 ],
@@ -542,8 +639,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                               child: Column(
                                 children: [
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.youtube),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "youtube.com/watch?v=9cDYq1cun8o")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
                                 ],
@@ -554,8 +655,12 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(FontAwesomeIcons.instagram),
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/zamericanenglish/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
