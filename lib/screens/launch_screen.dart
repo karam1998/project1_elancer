@@ -40,7 +40,6 @@ class _LaunchScreenState extends State<LaunchScreen> {
               // color: Colors.white,
             ),
           ),
-          Image.asset('images/Pattern.png'),
           Center(
             child: SvgPicture.asset('images/Logo2.svg'),
           ),

@@ -14,9 +14,14 @@ class OutBoardingScreen extends StatefulWidget {
 
 class _OutBoardingScreenState extends State<OutBoardingScreen> {
   List<OnboardingModel> screen = <OnboardingModel>[
-    OnboardingModel(imag: 'images/learn.png', text: 'اعثر على شخصيتك المفضله ...'),
-    OnboardingModel(imag: 'images/readingbook.png', text: 'على مختلف وسائل التواصل الاجتماعيه..'),
-    OnboardingModel(imag: 'images/manthumbs.png', text: 'فيسبوك!.. انستغرام!.. تويتر!.. يوتيوب! جميعهم في مكان واحد'),
+    OnboardingModel(
+        imag: 'images/learn.png', text: 'اعثر على شخصيتك المفضله ...'),
+    OnboardingModel(
+        imag: 'images/readingbook.png',
+        text: 'على مختلف وسائل التواصل الاجتماعيه..'),
+    OnboardingModel(
+        imag: 'images/manthumbs.png',
+        text: 'فيسبوك!.. انستغرام!.. تويتر!.. يوتيوب! جميعهم في مكان واحد'),
   ];
   late PageController _pageController;
   int _currentPage = 0;
@@ -47,10 +52,13 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
               visible: _currentPage < 2,
               replacement: TextButton(
                 onPressed: () =>
-                    Navigator.pushReplacementNamed(context, '/login_screen'),
+                    Navigator.pushReplacementNamed(context, '/main_screen'),
                 child: const Text(
                   'البدء',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'NotoNaskhArabic'),
                 ),
               ),
               child: TextButton(
@@ -59,7 +67,10 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                   duration: const Duration(seconds: 1),
                   curve: Curves.easeInOut,
                 ),
-                child: const Text('تخطى',style: TextStyle(fontFamily: 'NotoNaskhArabic'),),
+                child: const Text(
+                  'تخطى',
+                  style: TextStyle(fontFamily: 'NotoNaskhArabic'),
+                ),
               ),
             ),
           ),
@@ -86,11 +97,22 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Image.asset(screen[index].imag),
-                      const SizedBox(
-                        // height: 10,
+                      Container(
+                        child: Image.asset(screen[index].imag,fit: BoxFit.cover,),
+                        height: 300,
+
                       ),
-                      Text(screen[index].text,style: const TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),),
+                      const SizedBox(
+                          // height: 10,
+                          ),
+                      Text(
+                        screen[index].text,
+                        style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'NotoNaskhArabic'),
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -143,7 +165,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: ElevatedButton(
                             onPressed: () => Navigator.pushReplacementNamed(
-                                context, '/login_screen'),
+                                context, '/main_screen'),
                             child: const Text(
                               'بداية',
                               style: TextStyle(

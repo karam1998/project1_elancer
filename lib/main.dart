@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:project1/screens/category_screens/famouse_screen.dart';
 import 'package:project1/screens/category_screens/influencers_screen.dart';
 import 'package:project1/screens/category_screens/muslems_screen.dart';
 import 'package:project1/screens/category_screens/reciters_screen.dart';
@@ -29,7 +28,6 @@ class MyApp extends StatelessWidget {
         '/reciters_screen': (context) => const RecitersScreen(),
         '/influencers_screen': (context) => const InfluencersScreen(),
         '/main_screen': (context) => const MainScreen(),
-        '/famouse_screen': (context) => const FamouseScreen(),
       },
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,

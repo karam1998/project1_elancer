@@ -29,15 +29,18 @@ class _RecitersScreenState extends State<RecitersScreen> {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
+        leading:IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
+          splashColor: Colors.blue,
+          splashRadius: 30,
+          iconSize: 25,
           icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
-          padding: const EdgeInsets.only(left: 7),
+          padding: const EdgeInsets.only(right: 20),
         ),
       ),
       backgroundColor: Colors.white,
@@ -728,15 +731,23 @@ class _RecitersScreenState extends State<RecitersScreen> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          image: AssetImage(userImage), fit: BoxFit.cover),
+                  CircleAvatar(
+                    radius: 27,
+                    backgroundColor: Colors.blue,
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: AssetImage(userImage), fit: BoxFit.cover),
+                      ),
                     ),
                   ),
+
+                  /**
+                   * AssetImage(userImage), fit: BoxFit.cover),
+                   * */
                   const SizedBox(
                     width: 10,
                   ),
@@ -745,74 +756,58 @@ class _RecitersScreenState extends State<RecitersScreen> {
                     children: <Widget>[
                       Text(
                         userName,
-                        style: TextStyle(
-                            color: Colors.grey[900],
+                        style: const TextStyle(
+                            color: Colors.black,
                             fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            letterSpacing: .5),
-                      ),
-                      const SizedBox(
-                        height: 3,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: .5,
+                            fontFamily: 'NotoNaskhArabic'),
                       ),
                     ],
                   )
                 ],
               ),
-              IconButton(
-                icon: Icon(
+              /**
+               * IconButton(
+                  icon: Icon(
                   Icons.more_horiz,
                   size: 30,
                   color: Colors.grey[600],
-                ),
-                onPressed: () {},
-              )
+                  ),
+                  onPressed: () {},
+                  )
+               * */
             ],
           ),
           const SizedBox(
             height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 5,right: 10),
             child: Text(
               aboutUser,
               style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.grey[800],
-                  height: 1,
-                  letterSpacing: 1),
+                fontSize: 17,
+                color: Colors.grey[900],
+                height: 1.15,
+                letterSpacing: 0,
+                fontFamily: 'SourceSansPro',
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 5,
           ),
           mainImage != ''
               ? Container(
-                  height: 200,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: AssetImage(mainImage), fit: BoxFit.contain)),
-                )
+            height: 200,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    image: AssetImage(mainImage), fit: BoxFit.contain)),
+          )
               : Container(),
-          const SizedBox(
-            height: 0,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget instagramButton() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.instagram),
-              color: Colors.pink.shade400,
-              iconSize: 28),
-          // SizedBox(height: 3,),
         ],
       ),
     );

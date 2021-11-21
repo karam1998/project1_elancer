@@ -97,6 +97,19 @@ flutter:
           style: italic
         - asset: fonts/NotoNaskhArabic-Bold.ttf
           weight: 700
+    - family: Noto
+      fonts:
+        - asset: fonts/NotoSerif-Regular.ttf
+        - asset: fonts/NotoSerif-Bold.ttf
+          weight: 700
+    - family: Montserrat
+      fonts:
+        - asset: fonts/MontserratAlternates-Bold.ttf
+          weight: 700
+        - asset: fonts/MontserratAlternates-Italic.ttf
+          weight: 500
+        - asset: fonts/MontserratAlternates-Medium.ttf
+        - asset: fonts/MontserratAlternates-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

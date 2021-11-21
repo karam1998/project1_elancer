@@ -11,8 +11,7 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Container(
         padding: const EdgeInsets.only(left: 16, top: 25, right: 16),
         child: ListView(
           children: [
@@ -41,37 +40,59 @@ class _SettingScreenState extends State<SettingScreen> {
             const SizedBox(
               height: 10,
             ),
-            buildAccountOptionRow(context, "تغيير كلمة المرور"),
-            buildAccountOptionRow(context, "إعدادات المحتوى"),
-            buildAccountOptionRow(context, "اجتماعي"),
-            buildAccountOptionRow(context, "اللغة"),
-            buildAccountOptionRow(context, "الخصوصية والأمان"),
+            GestureDetector(
+              onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('اللغه'),
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: const [
+                            Text("عربي"),
+                            Text("English"),
+                          ],
+                        ),
+                        actions: [
+                          TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: const Text("إغلاق",style: TextStyle(fontFamily: 'NotoNaskhArabic'),)),
+                        ],
+                      );
+                    });
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'اللغه',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+            ),
             const SizedBox(
               height: 40,
             ),
-            Row(
-              children: const [
-                Icon(
-                  Icons.volume_up_outlined,
-                  color: Colors.blue,
-                ),
-                SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  "الإشعارات",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,fontFamily: 'NotoNaskhArabic'),
-                ),
-              ],
-            ),
+
             const Divider(
               height: 15,
               thickness: 2,
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            buildNotificationOptionRow("نشاط الحساب", true),
             const SizedBox(
               height: 50,
             ),
@@ -88,29 +109,10 @@ class _SettingScreenState extends State<SettingScreen> {
             )
           ],
         ),
-      ),
     );
   }
 }
 
-Row buildNotificationOptionRow(String title, bool isActive) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Text(
-        title,
-        style: TextStyle(
-            fontSize: 18, fontWeight: FontWeight.w500, color: Colors.grey[600]),
-      ),
-      Transform.scale(
-          scale: 0.6,
-          child: CupertinoSwitch(
-            value: isActive,
-            onChanged: (bool val) {},
-          ))
-    ],
-  );
-}
 
 GestureDetector buildAccountOptionRow(BuildContext context, String title) {
   return GestureDetector(

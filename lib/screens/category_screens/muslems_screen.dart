@@ -28,11 +28,14 @@ class _MuslemScreenState extends State<MuslemScreen> {
           onPressed: () {
             Navigator.pop(context);
           },
+          splashColor: Colors.blue,
+          splashRadius: 30,
+          iconSize: 25,
           icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
-          padding: const EdgeInsets.only(left: 7),
+          padding: const EdgeInsets.only(right: 20),
         ),
       ),
       backgroundColor: Colors.white,
@@ -217,7 +220,166 @@ class _MuslemScreenState extends State<MuslemScreen> {
                         thickness: 1,
                         color: Colors.grey,
                       ),
-
+                      userArea(
+                        userName: 'نايف الصحفي',
+                        aboutUser:
+                            'هو المشرف العام على مشروع المصليات المتنقلة في جدة بالسعودية واخصائي تثقيف بجمعية كفى وداعية بمشروع سلطان الخير لحماية الأمن الفكري',
+                        mainImage: 'images/naef.jpg',
+                        userImage: 'images/naef.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/alsahfe2")
+                                          },
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/alsahfe2")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/user/AL9A7FI")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/GrandImam")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                        userName: 'الشيخ بدر المشاري',
+                        aboutUser:
+                            'الشيخ بدر بن نادر المشاري داعية إسلامي سعودي، وإمام جامع حطين بالحرس الوطني بالرياض ولد عام 1393 هـ الموافق 1973م في مدينة الرياض',
+                        mainImage: 'images/msharee1.jpg',
+                        userImage: 'images/msharee.jpg',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/Badr.Mishari0")
+                                          },
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/badr_almeshari")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/channel/UCj4m277CMHDhUCuz3N2ra2g/playlists")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/badr_almeshari/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
                       userArea(
                         userName: 'محمد بن إبراهيم العوضي',
                         aboutUser:
@@ -370,6 +532,147 @@ class _MuslemScreenState extends State<MuslemScreen> {
                                       color: Colors.pink.shade400,
                                       iconSize: 28),
                                   // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                          userImage: 'images/Ahmed_el_Tayeb.jpg',
+                          aboutUser:
+                              ' الإمام الأكبر شيخ الجامع الأزهر (الإمام الثامن والأربعون ) منذ 19 مارس 2010. والرئيس السابق لجامعة الأزهر، ورئيس مجلس حكماء المسلمين، وهو أستاذ في العقيدة الإسلامية',
+                          mainImage: 'images/Ahmed_el_Tayeb.jpg',
+                          userName: 'أحمد الطيب'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/GrandImam")
+                                          },
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/alimamaltayeb?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/channel/UC1qJ_59mfZG82MUY_9GBA4A")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.instagram.com/alimamaltayeb/")
+                                          },
+                                      icon: const Icon(
+                                          FontAwesomeIcons.instagram),
+                                      color: Colors.pink.shade400,
+                                      iconSize: 28),
+                                  // SizedBox(height: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                      ),
+                      userArea(
+                          userName: 'د. طارق السويدان',
+                          userImage: 'images/tareq.jpg',
+                          aboutUser:
+                              ' باحث وكاتب، وداعية إسلامي، ومؤرخ، وإعلامي، ومدرب في الإدارة والقيادة.',
+                          mainImage: 'images/tareq.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15, left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.facebook.com/Dr.TareqAlSuwaidan")
+                                          },
+                                      icon: const Icon(Icons.facebook),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://twitter.com/TareqAlSuwaidan")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.twitter),
+                                      color: Colors.blue,
+                                      iconSize: 28),
+                                ],
+                              ),
+                            ),
+                            Center(
+                              child: Column(
+                                children: [
+                                  IconButton(
+                                      onPressed: () async => {
+                                            await launch(
+                                                "https://www.youtube.com/c/DrAlSuwaidan")
+                                          },
+                                      icon:
+                                          const Icon(FontAwesomeIcons.youtube),
+                                      color: Colors.redAccent,
+                                      iconSize: 28),
                                 ],
                               ),
                             ),
@@ -539,74 +842,11 @@ class _MuslemScreenState extends State<MuslemScreen> {
                         color: Colors.grey,
                       ),
                       userArea(
-                          userImage: 'images/laham.jpg',
-                          aboutUser: '',
-                          mainImage: 'images/laham.jpg',
-                          userName: 'الشيخ حسني لحام'),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 15, left: 15),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Center(
-                              child: Column(
-                                children: [
-                                  IconButton(
-                                      onPressed: () async => {
-                                            await launch(
-                                                "https://www.facebook.com/alnoormosq/?ref=page_internal")
-                                          },
-                                      icon: const Icon(Icons.facebook),
-                                      color: Colors.blue,
-                                      iconSize: 28),
-                                ],
-                              ),
-                            ),
-                            Center(
-                              child: Column(
-                                children: [
-                                  IconButton(
-                                      onPressed: () async => {
-                                            await launch(
-                                                "https://www.youtube.com/channel/UCpC-KiXrG1bzWhCQV_VW_XQ")
-                                          },
-                                      icon:
-                                          const Icon(FontAwesomeIcons.youtube),
-                                      color: Colors.redAccent,
-                                      iconSize: 28),
-                                ],
-                              ),
-                            ),
-                            Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  IconButton(
-                                      onPressed: () async => {
-                                            await launch(
-                                                "https://www.instagram.com/hosnilaham/?fbclid=IwAR0kxtJgOVrMDukrdbIWu3l8DQ5dNr-codMvXo3zuUk6Qzomm6b9Ddw28XU")
-                                          },
-                                      icon: const Icon(
-                                          FontAwesomeIcons.instagram),
-                                      color: Colors.pink.shade400,
-                                      iconSize: 28),
-                                  // SizedBox(height: 3,),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const Divider(
-                        thickness: 1,
-                        color: Colors.grey,
-                      ),
-                      userArea(
-                          userImage: 'images/Ahmed_el_Tayeb.jpg',
+                          userName: 'د. طارق السويدان',
+                          userImage: 'images/tareq.jpg',
                           aboutUser:
-                              ' الإمام الأكبر شيخ الجامع الأزهر (الإمام الثامن والأربعون ) منذ 19 مارس 2010. والرئيس السابق لجامعة الأزهر، ورئيس مجلس حكماء المسلمين، وهو أستاذ في العقيدة الإسلامية',
-                          mainImage: 'images/Ahmed_el_Tayeb.jpg',
-                          userName: 'أحمد الطيب'),
+                              ' باحث وكاتب، وداعية إسلامي، ومؤرخ، وإعلامي، ومدرب في الإدارة والقيادة.',
+                          mainImage: 'images/tareq.jpg'),
                       Padding(
                         padding: const EdgeInsets.only(right: 15, left: 15),
                         child: Row(
@@ -618,7 +858,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
                                   IconButton(
                                       onPressed: () async => {
                                             await launch(
-                                                "https://www.facebook.com/GrandImam")
+                                                "https://www.facebook.com/Dr.TareqAlSuwaidan")
                                           },
                                       icon: const Icon(Icons.facebook),
                                       color: Colors.blue,
@@ -632,7 +872,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
                                   IconButton(
                                       onPressed: () async => {
                                             await launch(
-                                                "https://twitter.com/alimamaltayeb?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor")
+                                                "https://twitter.com/TareqAlSuwaidan")
                                           },
                                       icon:
                                           const Icon(FontAwesomeIcons.twitter),
@@ -647,29 +887,12 @@ class _MuslemScreenState extends State<MuslemScreen> {
                                   IconButton(
                                       onPressed: () async => {
                                             await launch(
-                                                "https://www.youtube.com/channel/UC1qJ_59mfZG82MUY_9GBA4A")
+                                                "https://www.youtube.com/c/DrAlSuwaidan")
                                           },
                                       icon:
                                           const Icon(FontAwesomeIcons.youtube),
                                       color: Colors.redAccent,
                                       iconSize: 28),
-                                ],
-                              ),
-                            ),
-                            Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  IconButton(
-                                      onPressed: () async => {
-                                            await launch(
-                                                "https://www.instagram.com/alimamaltayeb/")
-                                          },
-                                      icon: const Icon(
-                                          FontAwesomeIcons.instagram),
-                                      color: Colors.pink.shade400,
-                                      iconSize: 28),
-                                  // SizedBox(height: 3,),
                                 ],
                               ),
                             ),
@@ -680,6 +903,7 @@ class _MuslemScreenState extends State<MuslemScreen> {
                         thickness: 1,
                         color: Colors.grey,
                       ),
+
                       userArea(
                           userImage: 'images/Dr_Zakir_Naik.jpg',
                           aboutUser:
@@ -781,15 +1005,23 @@ class _MuslemScreenState extends State<MuslemScreen> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          image: AssetImage(userImage), fit: BoxFit.cover),
+                  CircleAvatar(
+                    radius: 27,
+                    backgroundColor: Colors.blue,
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: AssetImage(userImage), fit: BoxFit.cover),
+                      ),
                     ),
                   ),
+
+                  /**
+                   * AssetImage(userImage), fit: BoxFit.cover),
+                   * */
                   const SizedBox(
                     width: 10,
                   ),
@@ -798,46 +1030,48 @@ class _MuslemScreenState extends State<MuslemScreen> {
                     children: <Widget>[
                       Text(
                         userName,
-                        style: TextStyle(
-                            color: Colors.grey[900],
+                        style: const TextStyle(
+                            color: Colors.black,
                             fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            letterSpacing: .5),
-                      ),
-                      const SizedBox(
-                        height: 3,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: .5,
+                            fontFamily: 'NotoNaskhArabic'),
                       ),
                     ],
                   )
                 ],
               ),
-              IconButton(
-                icon: Icon(
+              /**
+               * IconButton(
+                  icon: Icon(
                   Icons.more_horiz,
                   size: 30,
                   color: Colors.grey[600],
-                ),
-                onPressed: () {},
-              )
+                  ),
+                  onPressed: () {},
+                  )
+               * */
             ],
           ),
           const SizedBox(
             height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 5, right: 10),
             child: Text(
               aboutUser,
               style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.grey[800],
-                  height: 1,
-                  letterSpacing: 1,
-                  fontFamily: 'NotoNaskhArabic'),
+                fontSize: 17,
+                color: Colors.grey[900],
+                height: 1.15,
+                letterSpacing: 0,
+                fontFamily: 'SourceSansPro',
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 5,
           ),
           mainImage != ''
               ? Container(
@@ -848,9 +1082,6 @@ class _MuslemScreenState extends State<MuslemScreen> {
                           image: AssetImage(mainImage), fit: BoxFit.contain)),
                 )
               : Container(),
-          const SizedBox(
-            height: 0,
-          ),
         ],
       ),
     );
