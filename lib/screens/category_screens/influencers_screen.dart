@@ -614,7 +614,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 IconButton(
                                     onPressed: () async => {
                                       await launch(
-                                          "https://www.facebook.com/people/%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D9%86%D8%AD%D9%8A%D8%AA-Mohammed-Alnhet/100044285923503/")
+                                          "https://www.facebook.com/OsElzero")
                                     },
                                     icon: const Icon(Icons.facebook),
                                     color: Colors.blue,
@@ -628,7 +628,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 IconButton(
                                     onPressed: () async => {
                                       await launch(
-                                          "https://twitter.com/M_Alnhet")
+                                          "https://twitter.com/Osama_Elzero")
                                     },
                                     icon:
                                     const Icon(FontAwesomeIcons.twitter),
@@ -643,7 +643,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 IconButton(
                                     onPressed: () async => {
                                       await launch(
-                                          "https://www.youtube.com/c/alnhet")
+                                          "https://www.youtube.com/c/ElzeroInfo/featured")
                                     },
                                     icon:
                                     const Icon(FontAwesomeIcons.youtube),
@@ -659,7 +659,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
                                 IconButton(
                                     onPressed: () async => {
                                       await launch(
-                                          "https://www.instagram.com/m_alnhet/")
+                                          "https://www.instagram.com/Osama_Elzero/")
                                     },
                                     icon: const Icon(
                                         FontAwesomeIcons.instagram),
