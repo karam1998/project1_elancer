@@ -16,7 +16,7 @@ class _InfluencersScreenState extends State<InfluencersScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'المؤثرون',
+          'المؤثرين',
           style: TextStyle(
               color: Colors.blue, fontSize: 28, fontWeight: FontWeight.bold),
         ),
